@@ -8,6 +8,7 @@ public class SumbarineBehaviour : MonoBehaviour
     float camera_half_height, camera_half_width;
     SpriteRenderer sprite_renderer;
     const float SPEED = 0.05f;
+    public Transform torpedo;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class SumbarineBehaviour : MonoBehaviour
     void Update()
     {
         moveSubmarine();
+        shootTorpedo();
     }
     void moveSubmarine()
     {
@@ -41,6 +43,13 @@ public class SumbarineBehaviour : MonoBehaviour
         if (Input.GetKey(KeyCode.S) && transform.position.y - vertical_speed.y - sprite_renderer.sprite.bounds.extents.y >= -camera_half_height)
         {
             transform.position -= vertical_speed;
+        }
+    }
+    void shootTorpedo()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(torpedo, transform.position, transform.rotation);
         }
     }
 }
