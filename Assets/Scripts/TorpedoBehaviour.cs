@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class TorpedoBehaviour : MonoBehaviour
 {
+    public SubMarineBehaviour submarine;
     const float SPEED = 0.05f;
     Vector3 horizontal_speed;
-    float camera_half_height, camera_half_width;
+    float camera_half_width;
 
     // Start is called before the first frame update
     void Start()
     {
+        submarine = GetComponent<SubMarineBehaviour>();
         horizontal_speed.Set(SPEED, 0, 0);
-        camera_half_height = Camera.main.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
         camera_half_width = Camera.main.orthographicSize * Camera.main.aspect;    //Multiply the half-height by the aspect ration to get the half-width
+        //if (submarine.torpedo_index == 3)
+        //{
+        //    horizontal_speed.Set(SPEED / 2, SPEED / 2, 0);
+        //    transform.rotation.Set(0, 0, 45, 0);
+        //}
+        //else if (submarine.torpedo_index == 4)
+        //{
+        //    horizontal_speed.Set(SPEED / 2, -SPEED / 2, 0);
+        //    transform.rotation.Set(0, 0, -45, 0);
+        //}
+        // Tried to access the torpedo_index which indicate which shot is being fired and changes transform to create a spreadshot
     }
 
     // Update is called once per frame
@@ -28,7 +40,9 @@ public class TorpedoBehaviour : MonoBehaviour
 
     void moveTorpedo()
     {
+       
         transform.position += horizontal_speed;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,6 +50,8 @@ public class TorpedoBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
+            // value of gameobject remains unchanged
         }
+       
     }
 }

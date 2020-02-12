@@ -62,9 +62,9 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    void spawnEnemy (Transform enemy)
-    {
-        //Spawn enemy
-        Debug.Log("Spawning enemy: " + enemy.name);
-    }
+    //void spawnEnemy (Transform enemy)
+    //{
+    //    //Spawn enemy
+    //    Debug.Log("Spawning enemy: " + enemy.name);
+    //}
 }
