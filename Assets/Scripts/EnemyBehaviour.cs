@@ -9,6 +9,11 @@ public class EnemyBehaviour : MonoBehaviour
     const float SPEED = 0.01f;
     SpriteRenderer sprite_renderer;
 
+    public int bullet_damage;
+    public int torpedo_damage;
+
+    public int health_points;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +26,17 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveEnemy();
-        if (transform.position.x - sprite_renderer.sprite.bounds.extents.x <= -camera_half_width)
+        if (health_points <= 0)
         {
-            Destroy(gameObject, 1);
+            Destroy(gameObject);
+        }
+        else
+        {
+            moveEnemy();
+            if (transform.position.x - sprite_renderer.sprite.bounds.extents.x <= -camera_half_width)
+            {
+                Destroy(gameObject, 1);
+            }
         }
     }
 
@@ -35,15 +47,15 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Torpedo")
+        if (collision.tag == "Torpedo")
         {
-            Destroy(gameObject);
-            
+            health_points -= torpedo_damage;
+            Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Player")
+        if (collision.tag == "Bullet")
         {
-            Destroy(gameObject);
+            health_points -= bullet_damage;
+            Destroy(collision.gameObject);
         }
-
     }
 }

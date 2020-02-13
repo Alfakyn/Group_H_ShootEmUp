@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorpedoBehaviour : MonoBehaviour
+public class BulletBehaviour : MonoBehaviour
 {
     public Rigidbody2D rigidbody2d;
     public float speed;
@@ -19,8 +19,8 @@ public class TorpedoBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveTorpedo();
-        if (transform.position.x >= camera_half_width || 
+        moveBullet();
+        if (transform.position.x >= camera_half_width ||
             transform.position.x <= -camera_half_width ||
             transform.position.y >= camera_half_height ||
             transform.position.y <= -camera_half_width)
@@ -29,7 +29,7 @@ public class TorpedoBehaviour : MonoBehaviour
         }
     }
 
-    void moveTorpedo()
+    void moveBullet()
     {
         rigidbody2d.velocity = transform.right * speed;
     }

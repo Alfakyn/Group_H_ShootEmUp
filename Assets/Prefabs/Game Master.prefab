@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2836239508140825336}
   - component: {fileID: 2836239508140825339}
-  - component: {fileID: 2836239508140825337}
   m_Layer: 0
   m_Name: Game Master
   m_TagString: Game Master
@@ -59,37 +58,3 @@ MonoBehaviour:
     enemy_index: 0
   time_between_waves: 5
   waves_timer: 0
---- !u!114 &2836239508140825337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2836239508140825338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d53cbc9833c8fd4ebff5a6670377a74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUps:
-  - name: 
-    power_up: {fileID: 654947451690265016, guid: d76044c242e182e4ab81bb17bed6c3b9,
-      type: 3}
-    type: 1
-    type_2: 5
-    power: 0
-    power_2: 0
-    spawn_time: 10
-    kills_required: 2
-  - name: 
-    power_up: {fileID: 654947451690265016, guid: d76044c242e182e4ab81bb17bed6c3b9,
-      type: 3}
-    type: 3
-    type_2: 5
-    power: 0
-    power_2: 0
-    spawn_time: 50
-    kills_required: 4
-  kill_counter: 0
-  power_up_index: 0
-  timer: 0
