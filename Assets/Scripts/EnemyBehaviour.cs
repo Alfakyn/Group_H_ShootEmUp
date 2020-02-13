@@ -57,7 +57,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             health_points -= bullet_damage;
             Destroy(collision.gameObject);
-            SoundManager.playSound(SoundManager.testSound);
         }
     }
 }
