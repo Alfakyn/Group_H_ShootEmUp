@@ -29,6 +29,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (health_points <= 0)
         {
             Destroy(gameObject);
+            SoundManager.playSound(SoundManager.testSound);
         }
         else
         {
@@ -51,7 +52,6 @@ public class EnemyBehaviour : MonoBehaviour
         {
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
-            SoundManager.playSound(SoundManager.testSound);
         }
         if (collision.tag == "Bullet")
         {
