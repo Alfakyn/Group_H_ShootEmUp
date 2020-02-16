@@ -681,6 +681,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 564272573247901916, guid: d8ef1aeedffd45e469c70a7369376869,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3803068677703723042, guid: d8ef1aeedffd45e469c70a7369376869,
         type: 3}
       propertyPath: torpedo_reload_time

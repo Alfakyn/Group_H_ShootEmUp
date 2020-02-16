@@ -33,8 +33,9 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else
         {
+            
             moveEnemy();
-            if (transform.position.x - sprite_renderer.sprite.bounds.extents.x <= -camera_half_width)
+            if (transform.position.x /*- sprite_renderer.sprite.bounds.extents.x*/ <= -camera_half_width)
             {
                 Destroy(gameObject, 1);
             }
@@ -57,6 +58,10 @@ public class EnemyBehaviour : MonoBehaviour
         {
             health_points -= bullet_damage;
             Destroy(collision.gameObject);
+        }
+        if(collision.tag == "Player")
+        {
+            Destroy(gameObject);
         }
     }
 }
