@@ -23,9 +23,6 @@ public class WaveSpawner : MonoBehaviour
     public float time_between_waves = 10.0f;
     public float waves_timer = 0.0f;
 
-    Transform[] spawntransform;
-    Transform spawn;
-
     // Start is called before the first frame update
     void Start()
     {

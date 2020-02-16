@@ -22,14 +22,14 @@ public class SubMarineBehaviour : MonoBehaviour
     public GameObject bullet;
     public float bullet_reload_interval;
     public float bullet_reload_timer = 0;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         //powerupspawner = GetComponent<PowerUpSpawner>();
-
+        
         main_camera = Camera.main;
-
         camera_half_height = main_camera.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
         camera_half_width = main_camera.orthographicSize * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
     }
