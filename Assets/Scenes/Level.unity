@@ -153,35 +153,11 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 1
+    enemy_count: 5
+    enemy_spawn_delay: 3
     enemy_spawn_timer: 0
     enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 50
-    enemy_spawn_delay: 0.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 0.1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 0.01
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 100
-    enemy_spawn_delay: 0.3
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  time_between_waves: 20
+  time_between_waves: 0
   waves_timer: 0
 --- !u!4 &146233182
 Transform:
@@ -312,35 +288,11 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 1
+    enemy_count: 5
+    enemy_spawn_delay: 3
     enemy_spawn_timer: 0
     enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 50
-    enemy_spawn_delay: 0.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 0.1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 0.01
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 100
-    enemy_spawn_delay: 0.3
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  time_between_waves: 5
+  time_between_waves: 0
   waves_timer: 0
 --- !u!4 &769646102
 Transform:
@@ -388,32 +340,8 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 50
-    enemy_spawn_delay: 0.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 0.1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 0.01
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 100
-    enemy_spawn_delay: 0.3
+    enemy_count: 5
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   time_between_waves: 0
@@ -470,35 +398,11 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 1
+    enemy_count: 5
+    enemy_spawn_delay: 3
     enemy_spawn_timer: 0
     enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 50
-    enemy_spawn_delay: 0.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 0.1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 0.01
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 100
-    enemy_spawn_delay: 0.3
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  time_between_waves: 10
+  time_between_waves: 0
   waves_timer: 0
 --- !u!4 &1373712544
 Transform:
@@ -633,35 +537,11 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 1
+    enemy_count: 5
+    enemy_spawn_delay: 3
     enemy_spawn_timer: 0
     enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 50
-    enemy_spawn_delay: 0.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 0.1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 0.01
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 100
-    enemy_spawn_delay: 0.3
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  time_between_waves: 15
+  time_between_waves: 0
   waves_timer: 0
 --- !u!4 &1590438792
 Transform:
@@ -778,6 +658,11 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3135104609374837028, guid: d8ef1aeedffd45e469c70a7369376869,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3803068677703723042, guid: d8ef1aeedffd45e469c70a7369376869,
         type: 3}
       propertyPath: torpedo_reload_time
@@ -803,6 +688,11 @@ PrefabInstance:
       propertyPath: rigidbody2d
       value: 
       objectReference: {fileID: 1291250041}
+    - target: {fileID: 6351936517107146601, guid: d8ef1aeedffd45e469c70a7369376869,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7200062420078867511, guid: d8ef1aeedffd45e469c70a7369376869,
         type: 3}
       propertyPath: m_Name

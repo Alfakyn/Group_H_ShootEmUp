@@ -53,6 +53,7 @@ public class SubMarineBehaviour : MonoBehaviour
         if (health_points == 0)
         {
             Debug.Log("Player has died");
+            health_points -= 1;
         }
     }
     void moveSubmarine()
@@ -89,7 +90,6 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            Destroy(collision.gameObject);
             if (health_points > 0)
             {
                 health_points--;
