@@ -3,6 +3,8 @@
 public class SoundManager : MonoBehaviour
 {
     public static AudioClip testSound;  //Do this for every audio file
+    public static AudioClip testMusic;
+
     static AudioSource audioSource;
 
     void Awake()
@@ -13,6 +15,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         testSound = Resources.Load<AudioClip>("SFX/Noice");  //Instantiate every audio file
+        testMusic = Resources.Load<AudioClip>("Music/testMusic");
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -22,3 +25,4 @@ public class SoundManager : MonoBehaviour
         audioSource.PlayOneShot(sound);
     }
 }
+

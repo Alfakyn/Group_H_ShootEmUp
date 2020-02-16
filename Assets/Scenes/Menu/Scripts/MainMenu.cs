@@ -19,5 +19,8 @@ public class MainMenu : MonoBehaviour
         SoundManager.playSound(SoundManager.testSound);
     }
 
-
+    public void playMusic()
+    {
+        SoundManager.playSound(SoundManager.testMusic);
+    }
 }
