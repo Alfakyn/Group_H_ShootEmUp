@@ -50,7 +50,7 @@ public class SubMarineBehaviour : MonoBehaviour
         shootTorpedo();
         shootGun();
 
-        if (health_points <= 0)
+        if (health_points == 0)
         {
             Debug.Log("Player has died");
         }
