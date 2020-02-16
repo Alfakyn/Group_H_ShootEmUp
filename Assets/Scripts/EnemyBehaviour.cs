@@ -8,7 +8,7 @@ public class EnemyBehaviour : MonoBehaviour
     float camera_half_width, camera_half_height;
     const float SPEED = 0.01f;
     SpriteRenderer sprite_renderer;
-    public Transform submarine;
+    private Transform submarine;
     public int bullet_damage;
     public int torpedo_damage;
     private bool has_targeted_player = false;

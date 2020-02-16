@@ -58,6 +58,10 @@ public class SubMarineBehaviour : MonoBehaviour
     }
     void moveSubmarine()
     {
+        Vector2 pos = rigidbody2d.position;
+        pos.x = Mathf.Clamp(pos.x, -camera_half_width, camera_half_width);
+        pos.y = Mathf.Clamp(pos.y, -camera_half_height, camera_half_height);
+        rigidbody2d.position = pos;
         rigidbody2d.velocity = (new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))) * MOVE_SPEED;
     }
     void shootTorpedo()
