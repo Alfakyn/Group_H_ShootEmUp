@@ -153,35 +153,11 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  time_between_waves: 10
+  time_between_waves: 5
   waves_timer: 0
 --- !u!4 &146233182
 Transform:
@@ -426,35 +402,185 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 10
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
   waves_timer: 0
 --- !u!4 &769646102
 Transform:
@@ -502,185 +628,185 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 3
-    enemy_spawn_delay: 2.5
+    enemy_count: 4
+    enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 20
+  time_between_waves: 5
   waves_timer: 0
 --- !u!4 &908138560
 Transform:
@@ -734,35 +860,185 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 10
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
   waves_timer: 0
 --- !u!4 &1373712544
 Transform:
@@ -897,35 +1173,185 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 2
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 10
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
   waves_timer: 0
 --- !u!4 &1590438792
 Transform:
@@ -1060,7 +1486,7 @@ PrefabInstance:
     - target: {fileID: 3803068677703723042, guid: d8ef1aeedffd45e469c70a7369376869,
         type: 3}
       propertyPath: bullet_reload_interval
-      value: 0.06
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3803068677703723042, guid: d8ef1aeedffd45e469c70a7369376869,
         type: 3}

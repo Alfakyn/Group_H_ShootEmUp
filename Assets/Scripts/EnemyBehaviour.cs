@@ -6,7 +6,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     Vector3 horizontal_speed, vertical_speed;
     float camera_half_width, camera_half_height;
-    const float SPEED = 0.1f;
+    const float SPEED = 0.05f;
     SpriteRenderer sprite_renderer;
     private Transform submarine;
     public int bullet_damage;
@@ -79,7 +79,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
         if (collision.tag == "Bullet")
         {
-            //SoundManager.playSound(SoundManager.hitBullet); If bullet leaves screen triggers sound
+            //SoundManager.playSound(SoundManager.hitBullet); //If bullet leaves screen triggers sound
             health_points -= bullet_damage;
             Destroy(collision.gameObject);
         }

@@ -97,10 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616b88974f7a0614eb9ff7a7f51e8d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  submarine: {fileID: 7200062420078867515, guid: d8ef1aeedffd45e469c70a7369376869,
-    type: 3}
-  bullet_damage: 1
-  torpedo_damage: 15
+  bullet_damage: 5
+  torpedo_damage: 10
   health_points: 15
 --- !u!50 &-3202860681769629793
 Rigidbody2D:
