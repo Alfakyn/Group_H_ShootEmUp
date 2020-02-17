@@ -11,8 +11,8 @@ public class TutorialBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sprite_offset = 5.0f; // rough estimate
-        speed.Set(-0.003f, 0, 0);
+        sprite_offset = 5f; // rough estimate
+        speed.Set(-0.01f, 0, 0);
         camera_half_width = Camera.main.orthographicSize * Camera.main.aspect;    //Multiply the half-height by the aspect ration to get the half-width
     }
 

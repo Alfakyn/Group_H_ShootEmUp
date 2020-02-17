@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet_damage: 5
   torpedo_damage: 10
-  health_points: 15
+  health_points: 10
 --- !u!50 &-3202860681769629793
 Rigidbody2D:
   serializedVersion: 4
