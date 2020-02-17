@@ -73,11 +73,13 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (collision.tag == "Torpedo")
         {
+            SoundManager.playSound(SoundManager.hitTorpedo);
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Bullet")
         {
+            //SoundManager.playSound(SoundManager.hitBullet); If bullet leaves screen triggers sound
             health_points -= bullet_damage;
             Destroy(collision.gameObject);
         }
