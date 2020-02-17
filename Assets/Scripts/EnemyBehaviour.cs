@@ -6,7 +6,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     Vector3 horizontal_speed, vertical_speed;
     float camera_half_width, camera_half_height;
-    const float SPEED = 0.01f;
+    const float SPEED = 0.1f;
     SpriteRenderer sprite_renderer;
     private Transform submarine;
     public int bullet_damage;
