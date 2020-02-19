@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 public class SubMarineBehaviour : MonoBehaviour
 {
     //PowerUpSpawner powerupspawner;
 
     public Rigidbody2D rigidbody2d;
-
+    public UnityEngine.Experimental.Rendering.Universal.Light2D Flashlight;
     float camera_half_height, camera_half_width;
 
     Camera main_camera;
@@ -27,7 +29,7 @@ public class SubMarineBehaviour : MonoBehaviour
     void Start()
     {
         //powerupspawner = GetComponent<PowerUpSpawner>();
-        
+        Flashlight = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         main_camera = Camera.main;
         camera_half_height = main_camera.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
         camera_half_width = main_camera.orthographicSize * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
@@ -120,6 +122,11 @@ public class SubMarineBehaviour : MonoBehaviour
             {
                 health_points--;
             }
+        }
+        if(collision.tag == "Ink")
+        {
+            
+
         }
 
         //Powerup
