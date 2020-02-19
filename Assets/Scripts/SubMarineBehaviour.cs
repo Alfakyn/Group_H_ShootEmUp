@@ -17,7 +17,7 @@ public class SubMarineBehaviour : MonoBehaviour
     public int health_points;
     bool submarine_covered_in_ink;
     float ink_timer;
-    const float INK_FALLOFF = 2;
+    const float INK_FALLOFF = 10;
 
     public GameObject torpedo;
     public float torpedo_reload_interval;
