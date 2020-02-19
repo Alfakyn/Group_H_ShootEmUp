@@ -34,15 +34,37 @@ public class SubMarineBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+    //    if (torpedo_reload_timer > 0)
+    //    {
+    //        torpedo_reload_timer -= Time.deltaTime;
+    //    }
+    //    if (bullet_reload_timer > 0)
+    //    {
+    //        bullet_reload_timer -= Time.deltaTime;
+    //    }
+
+    //    moveSubmarine();
+    //    shootTorpedo();
+    //    shootGun();
+
+    //    if (health_points == 0)
+    //    {
+    //        Debug.Log("Player has died");
+    //        health_points -= 1;
+    //    }
+    //}
+
+    private void FixedUpdate()
     {
         if (torpedo_reload_timer > 0)
         {
-            torpedo_reload_timer -= Time.deltaTime;
+            torpedo_reload_timer -= Time.fixedDeltaTime;
         }
         if (bullet_reload_timer > 0)
         {
-            bullet_reload_timer -= Time.deltaTime;
+            bullet_reload_timer -= Time.fixedDeltaTime;
         }
 
         moveSubmarine();
@@ -61,7 +83,7 @@ public class SubMarineBehaviour : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x, -camera_half_width, camera_half_width);
         pos.y = Mathf.Clamp(pos.y, -camera_half_height, camera_half_height);
         rigidbody2d.position = pos;
-        rigidbody2d.velocity = (new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))) * MOVE_SPEED;
+        rigidbody2d.velocity = (new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"))) * MOVE_SPEED;
     }
     void shootTorpedo()
     {
@@ -80,7 +102,8 @@ public class SubMarineBehaviour : MonoBehaviour
             Vector2 mouse_screen_position = Input.mousePosition;
             Vector2 submarine_to_mouse = mouse_screen_position - submarine_screen_position;
 
-            float bullet_rotation_angle = Mathf.Atan2(submarine_to_mouse.y, submarine_to_mouse.x) * Mathf.Rad2Deg;
+            float angle_error_margin = Random.Range(-5.0f, 5.0f);
+            float bullet_rotation_angle = Mathf.Atan2(submarine_to_mouse.y, submarine_to_mouse.x) * Mathf.Rad2Deg + angle_error_margin; ;
 
             Quaternion bullet_rotation = Quaternion.Euler(0.0f, 0.0f, bullet_rotation_angle);
 

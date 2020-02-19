@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehaviour : MonoBehaviour
+public class Swordfish1Behaviour : MonoBehaviour
 {
     Vector3 horizontal_speed, vertical_speed;
     float camera_half_width, camera_half_height;
@@ -12,6 +12,8 @@ public class EnemyBehaviour : MonoBehaviour
     public int bullet_damage;
     public int torpedo_damage;
     private bool has_targeted_player = false;
+    private Camera main_camera;
+    private const float PLAYER_POSITION_OFFSET = 1.0f;
 
     public int health_points;
 
@@ -22,14 +24,15 @@ public class EnemyBehaviour : MonoBehaviour
         horizontal_speed.Set(SPEED * 1.5f, 0, 0);
         vertical_speed.Set(0, -SPEED, 0);
         sprite_renderer = GetComponent<SpriteRenderer>();
-        camera_half_height = Camera.main.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
-        camera_half_width = Camera.main.orthographicSize * Camera.main.aspect;    //Multiply the half-height by the aspect ration to get the half-width
+        main_camera = Camera.main;
+        camera_half_height = main_camera.orthographicSize;    //main_camera.orthographicSize returns the half-height of the camera in world units
+        camera_half_width = main_camera.orthographicSize * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
+        submarine = GameObject.Find("Submarine").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        submarine = GameObject.Find("Submarine").transform;
         if (health_points <= 0)
         {
             Destroy(gameObject);
@@ -37,12 +40,12 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else
         {
-            if (transform.position.y >= submarine.position.y - 1f && transform.position.y <= submarine.position.y + 1f)
+            if (transform.position.y >= submarine.position.y - PLAYER_POSITION_OFFSET && transform.position.y <= submarine.position.y + PLAYER_POSITION_OFFSET)
             {
                 has_targeted_player = true;
             }
             moveEnemy();
-            if (transform.position.x /*- sprite_renderer.sprite.bounds.extents.x*/ <= -camera_half_width)
+            if (transform.position.x <= -camera_half_width)
             {
                 Destroy(gameObject, 1);
             }
