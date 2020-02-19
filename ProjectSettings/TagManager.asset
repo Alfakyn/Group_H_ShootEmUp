@@ -8,6 +8,8 @@ TagManager:
   - Game Master
   - Torpedo
   - PowerUp
+  - Bullet
+  - Ink
   layers:
   - Default
   - TransparentFX

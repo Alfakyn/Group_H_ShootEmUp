@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 1291250041}
-  Flashlight: {fileID: 0}
+  Flashlight: {fileID: 1078983149}
   health_points: 6
   torpedo: {fileID: 326578428786369457, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
   torpedo_reload_interval: 1

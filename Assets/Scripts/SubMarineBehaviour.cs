@@ -15,6 +15,9 @@ public class SubMarineBehaviour : MonoBehaviour
 
     const float MOVE_SPEED = 5f;
     public int health_points;
+    bool submarine_covered_in_ink;
+    float ink_timer;
+    const float INK_FALLOFF = 2;
 
     public GameObject torpedo;
     public float torpedo_reload_interval;
@@ -29,7 +32,6 @@ public class SubMarineBehaviour : MonoBehaviour
     void Start()
     {
         //powerupspawner = GetComponent<PowerUpSpawner>();
-        Flashlight = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         main_camera = Camera.main;
         camera_half_height = main_camera.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
         camera_half_width = main_camera.orthographicSize * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
@@ -68,7 +70,7 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             bullet_reload_timer -= Time.fixedDeltaTime;
         }
-
+        checkInk();
         moveSubmarine();
         shootTorpedo();
         shootGun();
@@ -77,6 +79,21 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             Debug.Log("Player has died");
             health_points -= 1;
+        }
+    }
+    void checkInk()
+    {
+        if (ink_timer < INK_FALLOFF)
+        {
+            ink_timer += Time.fixedDeltaTime;
+        }
+        else
+        {
+            submarine_covered_in_ink = false;
+        }
+        if (submarine_covered_in_ink == true)
+        {
+            Flashlight.intensity = ink_timer / INK_FALLOFF;
         }
     }
     void moveSubmarine()
@@ -125,8 +142,9 @@ public class SubMarineBehaviour : MonoBehaviour
         }
         if(collision.tag == "Ink")
         {
-            
-
+            Debug.Log("Ink Collision");
+            submarine_covered_in_ink = true;
+            ink_timer = 0f;
         }
 
         //Powerup
