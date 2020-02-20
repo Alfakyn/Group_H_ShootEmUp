@@ -13,7 +13,7 @@ public class Swordfish1Behaviour : MonoBehaviour
     public int torpedo_damage;
     private bool has_targeted_player = false;
     private Camera main_camera;
-    private const float PLAYER_POSITION_OFFSET = 1.0f;
+    private const float PLAYER_POSITION_OFFSET = 0.2f;
 
     public int health_points;
 
