@@ -31,7 +31,7 @@ public class Swordfish1Behaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void FixedUpdate()
+    void Update()
     {
         if (health_points <= 0)
         {
@@ -76,9 +76,10 @@ public class Swordfish1Behaviour : MonoBehaviour
     {
         if (collision.tag == "Torpedo")
         {
-            SoundManager.playSound(SoundManager.hitTorpedo);
+            Debug.Log("Torpedo Collision");
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
+            SoundManager.playSound(SoundManager.hitTorpedo);
         }
         if (collision.tag == "Bullet")
         {

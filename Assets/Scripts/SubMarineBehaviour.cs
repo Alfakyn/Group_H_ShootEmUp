@@ -145,6 +145,7 @@ public class SubMarineBehaviour : MonoBehaviour
             Debug.Log("Ink Collision");
             submarine_covered_in_ink = true;
             ink_timer = 0f;
+            Destroy(collision.gameObject);
         }
 
         //Powerup
