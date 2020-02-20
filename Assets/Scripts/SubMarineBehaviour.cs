@@ -8,7 +8,7 @@ public class SubMarineBehaviour : MonoBehaviour
     //PowerUpSpawner powerupspawner;
 
     public Rigidbody2D rigidbody2d;
-    public UnityEngine.Experimental.Rendering.Universal.Light2D Flashlight;
+    public UnityEngine.Experimental.Rendering.Universal.Light2D flashlight;
     float camera_half_height, camera_half_width;
 
     Camera main_camera;
@@ -93,7 +93,7 @@ public class SubMarineBehaviour : MonoBehaviour
         }
         if (submarine_covered_in_ink == true)
         {
-            Flashlight.intensity = ink_timer / INK_FALLOFF;
+            flashlight.intensity = ink_timer / INK_FALLOFF;
         }
     }
     void moveSubmarine()

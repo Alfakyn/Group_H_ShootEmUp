@@ -31,7 +31,7 @@ public class Swordfish1Behaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         if (health_points <= 0)
         {
