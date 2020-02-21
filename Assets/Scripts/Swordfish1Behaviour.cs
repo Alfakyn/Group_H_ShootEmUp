@@ -36,7 +36,7 @@ public class Swordfish1Behaviour : MonoBehaviour
         if (health_points <= 0)
         {
             Destroy(gameObject);
-            SoundManager.playSound(SoundManager.testSound);
+            SoundManager.playSFX(SoundManager.testSound);
         }
         else
         {
@@ -79,7 +79,7 @@ public class Swordfish1Behaviour : MonoBehaviour
             Debug.Log("Torpedo Collision");
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
-            SoundManager.playSound(SoundManager.hitTorpedo);
+            SoundManager.playSFX(SoundManager.hitTorpedo);
         }
         if (collision.tag == "Bullet")
         {

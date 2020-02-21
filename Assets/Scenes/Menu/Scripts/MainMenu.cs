@@ -3,8 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+ 
     public void SceneSwitch()
     {
+        SoundManager.music.Stop();
         SceneManager.LoadScene(1);
     }
 
@@ -16,11 +18,6 @@ public class MainMenu : MonoBehaviour
 
     public void playButtonSound()
     {
-        SoundManager.playSound(SoundManager.testSound);
-    }
-
-    public void playMusic()
-    {
-        SoundManager.playSound(SoundManager.testMusic);
+        SoundManager.playSFX(SoundManager.testSound);
     }
 }

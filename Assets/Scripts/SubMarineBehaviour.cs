@@ -117,7 +117,7 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             Instantiate(torpedo, transform.position, transform.rotation);
             torpedo_reload_timer = torpedo_reload_interval;
-            SoundManager.playSound(SoundManager.shootingTorpedo);
+            SoundManager.playSFX(SoundManager.shootingTorpedo);
         }
     }
     void shootGun()
@@ -135,7 +135,7 @@ public class SubMarineBehaviour : MonoBehaviour
 
             Instantiate(bullet, transform.position, bullet_rotation);
             bullet_reload_timer = bullet_reload_interval;
-            SoundManager.playSound(SoundManager.shootingBullet);
+            SoundManager.playSFX(SoundManager.shootingBullet);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

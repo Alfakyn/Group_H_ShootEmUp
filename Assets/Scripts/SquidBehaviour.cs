@@ -35,7 +35,7 @@ public class SquidBehaviour : MonoBehaviour
         if (health_points <= 0)
         {
             Destroy(gameObject);
-            SoundManager.playSound(SoundManager.testSound);
+            SoundManager.playSFX(SoundManager.testSound);
         }
         if (ink_reload_timer > 0)
         {
@@ -87,7 +87,7 @@ public class SquidBehaviour : MonoBehaviour
         {
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
-            SoundManager.playSound(SoundManager.hitTorpedo);
+            SoundManager.playSFX(SoundManager.hitTorpedo);
         }
         if(collision.tag == "Player")
         {
