@@ -13,8 +13,11 @@ public class SubMarineBehaviour : MonoBehaviour
 
     Camera main_camera;
 
+   
     const float MOVE_SPEED = 5f;
     public int health_points;
+    const float INVINCIBILITY_FRAMES = 2;
+    public float invincibility_timer;
     bool submarine_covered_in_ink;
     float ink_timer;
     const float INK_FALLOFF = 10;
@@ -69,6 +72,10 @@ public class SubMarineBehaviour : MonoBehaviour
         if (bullet_reload_timer > 0)
         {
             bullet_reload_timer -= Time.fixedDeltaTime;
+        }
+        if(invincibility_timer > 0)
+        {
+            invincibility_timer -= Time.fixedDeltaTime;
         }
         checkInk();
         moveSubmarine();
@@ -133,21 +140,24 @@ public class SubMarineBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (invincibility_timer <= 0)
         {
-            if (health_points > 0)
+            if (collision.tag == "Enemy")
             {
-                health_points--;
+                if (health_points > 0)
+                {
+                    health_points--;
+                }
+                invincibility_timer = INVINCIBILITY_FRAMES;
+            }
+            if (collision.tag == "Ink")
+            {
+                invincibility_timer = INVINCIBILITY_FRAMES;
+                submarine_covered_in_ink = true;
+                ink_timer = 0f;
+                Destroy(collision.gameObject);
             }
         }
-        if(collision.tag == "Ink")
-        {
-            Debug.Log("Ink Collision");
-            submarine_covered_in_ink = true;
-            ink_timer = 0f;
-            Destroy(collision.gameObject);
-        }
-
         //Powerup
         {
             /* Does not work, values of submarine remain unchanged 

@@ -83,6 +83,8 @@ public class Swordfish1Behaviour : MonoBehaviour
         }
         if (collision.tag == "Bullet")
         {
+            Debug.Log("Bullet Collision");
+            
             //SoundManager.playSound(SoundManager.hitBullet); //If bullet leaves screen triggers sound
             health_points -= bullet_damage;
             Destroy(collision.gameObject);
