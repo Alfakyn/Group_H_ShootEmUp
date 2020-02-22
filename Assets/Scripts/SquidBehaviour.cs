@@ -4,33 +4,38 @@ using UnityEngine;
 
 public class SquidBehaviour : MonoBehaviour
 {
+    public Rigidbody2D rigidbody2d;
+    private bool moving_up;
+
     public int bullet_damage;
     public int torpedo_damage;
-    float camera_half_width, camera_half_height;
+
+    float camera_half_width;
     private Camera main_camera;
+
     float target_position;
-    const float SPEED = 0.05f;
-    
-    Vector3 horizontal_speed, vertical_speed;
+    const float HORIZONTAL_SPEED = 5.0f;
+    const float VERTICAL_SPEED = 10.0f;
 
     public GameObject ink;
     public float ink_reload_timer = 0;
     public float ink_reload_interval;
 
     public int health_points;
+
     // Start is called before the first frame update
     void Start()
     {
         main_camera = Camera.main;
-        camera_half_height = main_camera.orthographicSize;    //main_camera.orthographicSize returns the half-height of the camera in world units
-        camera_half_width = main_camera.orthographicSize * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
-        horizontal_speed.Set(SPEED, 0,0);
-        vertical_speed.Set(0, -SPEED * 1.5f,0);
+        camera_half_width = main_camera.orthographicSize * main_camera.aspect;    //Multiply the camera half-height by the aspect ration to get the half-width
+
         target_position = camera_half_width / 2f;
+
+        moving_up = (Random.value > 0.5f); //Random.value returns a number between 0 and 1. This line initializes a boolean randomly with true or false at ~50% chance each
     }
 
     // Update is called once per frame
-    void  Update()
+    void Update()
     {
         if (health_points <= 0)
         {
@@ -41,13 +46,14 @@ public class SquidBehaviour : MonoBehaviour
         {
             ink_reload_timer -= Time.deltaTime;
         }
-        movesquid();
         shootInk();
-        if (transform.position.x <= -camera_half_width)
-        {
-            Destroy(gameObject, 1);
-        }
     }
+
+    private void FixedUpdate()
+    {
+        movesquid();        
+    }
+
     void shootInk()
     {
         if (ink_reload_timer <= 0)
@@ -58,23 +64,21 @@ public class SquidBehaviour : MonoBehaviour
     }
     void movesquid()
     {
-        if (transform.position.x <= target_position)
-        {
-            if (transform.position.y >= camera_half_height)
-            {
-                vertical_speed.Set(0, SPEED, 0);
-            }
-            else if (transform.position.y <= -camera_half_height)
-            {
-                vertical_speed.Set(0, -SPEED, 0);
-            }
-            transform.position -= vertical_speed;
+        if (transform.position.x > target_position)
+        { 
+            rigidbody2d.velocity = -transform.right * HORIZONTAL_SPEED; 
         }
-        else
+        else 
         {
-            transform.position -= horizontal_speed;
+            if (moving_up == true) 
+            {
+                rigidbody2d.velocity = transform.up * VERTICAL_SPEED;
+            }
+            else 
+            {
+                rigidbody2d.velocity = -transform.up * VERTICAL_SPEED;
+            }
         }
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -93,6 +97,13 @@ public class SquidBehaviour : MonoBehaviour
         {
             health_points -= health_points;
         }
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Camera Collider") 
+        { 
+            moving_up = !moving_up; 
+        }
     }
 }

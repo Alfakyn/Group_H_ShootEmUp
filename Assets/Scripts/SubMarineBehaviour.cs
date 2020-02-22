@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 public class SubMarineBehaviour : MonoBehaviour
 {
-    //PowerUpSpawner powerupspawner;
+    //public PowerUpSpawner powerupspawner;
 
     public Rigidbody2D rigidbody2d;
     public UnityEngine.Experimental.Rendering.Universal.Light2D flashlight;
@@ -15,9 +15,10 @@ public class SubMarineBehaviour : MonoBehaviour
 
     const float MOVE_SPEED = 5f;
     public int health_points;
+
     bool submarine_covered_in_ink;
-    float ink_timer;
-    const float INK_FALLOFF = 10;
+    const float INK_FALLOFF_TIME = 10;
+    public float ink_timer = 0;
 
     public GameObject torpedo;
     public float torpedo_reload_interval;
@@ -30,60 +31,36 @@ public class SubMarineBehaviour : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        //powerupspawner = GetComponent<PowerUpSpawner>();
+    { 
         main_camera = Camera.main;
         camera_half_height = main_camera.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
-        camera_half_width = main_camera.orthographicSize * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
+        camera_half_width = camera_half_height * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
+
+        submarine_covered_in_ink = false;
     }
 
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    if (torpedo_reload_timer > 0)
-    //    {
-    //        torpedo_reload_timer -= Time.deltaTime;
-    //    }
-    //    if (bullet_reload_timer > 0)
-    //    {
-    //        bullet_reload_timer -= Time.deltaTime;
-    //    }
-
-    //    moveSubmarine();
-    //    shootTorpedo();
-    //    shootGun();
-
-    //    if (health_points == 0)
-    //    {
-    //        Debug.Log("Player has died");
-    //        health_points -= 1;
-    //    }
-    //}
+    //Update is called once per frame
+    void Update()
+    {
+        
+        
+        checkInk();
+        shootTorpedo();
+        shootGun();
+    }
 
     private void FixedUpdate()
     {
-        if (torpedo_reload_timer > 0)
-        {
-            torpedo_reload_timer -= Time.fixedDeltaTime;
-        }
-        if (bullet_reload_timer > 0)
-        {
-            bullet_reload_timer -= Time.fixedDeltaTime;
-        }
-        checkInk();
         moveSubmarine();
-        shootTorpedo();
-        shootGun();
 
         if (health_points == 0)
         {
             Debug.Log("Player has died");
-            health_points -= 1;
         }
     }
     void checkInk()
     {
-        if (ink_timer < INK_FALLOFF)
+        if (ink_timer < INK_FALLOFF_TIME)
         {
             ink_timer += Time.fixedDeltaTime;
         }
@@ -93,7 +70,7 @@ public class SubMarineBehaviour : MonoBehaviour
         }
         if (submarine_covered_in_ink == true)
         {
-            flashlight.intensity = ink_timer / INK_FALLOFF;
+            flashlight.intensity = ink_timer / INK_FALLOFF_TIME;
         }
     }
     void moveSubmarine()
@@ -106,6 +83,11 @@ public class SubMarineBehaviour : MonoBehaviour
     }
     void shootTorpedo()
     {
+        if (torpedo_reload_timer > 0)
+        {
+            torpedo_reload_timer -= Time.deltaTime;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && torpedo_reload_timer <= 0)
         {
             Instantiate(torpedo, transform.position, transform.rotation);
@@ -115,6 +97,11 @@ public class SubMarineBehaviour : MonoBehaviour
     }
     void shootGun()
     {
+        if (bullet_reload_timer > 0)
+        {
+            bullet_reload_timer -= Time.deltaTime;
+        }
+
         if (Input.GetMouseButton(0) && bullet_reload_timer <= 0)
         {
             Vector2 submarine_screen_position = main_camera.WorldToScreenPoint(transform.localPosition);

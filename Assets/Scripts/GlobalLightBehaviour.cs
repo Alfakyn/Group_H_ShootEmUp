@@ -14,11 +14,11 @@ public class GlobalLightBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
         if (light_intensity_timer > 0)
         {
-            global_light.intensity -= Time.fixedDeltaTime / SHADING_RATE;
+            global_light.intensity -= Time.deltaTime / SHADING_RATE;
         }
     }
 }

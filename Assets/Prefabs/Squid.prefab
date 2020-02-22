@@ -102,6 +102,7 @@ MonoBehaviour:
   ink: {fileID: 4704480462173560315, guid: f8d8145b3cb97b243b59d269c2df2eb5, type: 3}
   ink_reload_timer: 0
   ink_reload_interval: 5
+  rigidbody2d: {fileID: 3245328398364575458}
   health_points: 10
 --- !u!50 &3245328398364575458
 Rigidbody2D:
