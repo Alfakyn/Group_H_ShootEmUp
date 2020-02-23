@@ -97,12 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83b1653ed9141a43b5d11f9ec793a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody2d: {fileID: 3245328398364575458}
   bullet_damage: 1
   torpedo_damage: 10
   ink: {fileID: 4704480462173560315, guid: f8d8145b3cb97b243b59d269c2df2eb5, type: 3}
   ink_reload_timer: 0
   ink_reload_interval: 5
-  rigidbody2d: {fileID: 3245328398364575458}
   health_points: 10
 --- !u!50 &3245328398364575458
 Rigidbody2D:
@@ -137,14 +137,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LightType: 0
+  m_LightType: 2
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.07
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
+  m_LightCookieSprite: {fileID: 21300000, guid: 6023900c2bf6967459ed47bc0af3b0e0,
+    type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
