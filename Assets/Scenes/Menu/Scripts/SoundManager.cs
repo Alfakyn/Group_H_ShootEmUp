@@ -4,6 +4,7 @@ public class SoundManager : MonoBehaviour
 {
     public static AudioClip testSound;  //Do this for every audio file
     public static AudioClip menuMusic1;
+    public static AudioClip gameMusic1;
     public static AudioClip shootingTorpedo;
     public static AudioClip shootingBullet;
     public static AudioClip hitTorpedo;
@@ -22,6 +23,7 @@ public class SoundManager : MonoBehaviour
     {
         testSound = Resources.Load<AudioClip>("SFX/Noice");  //Instantiate every audio file
         menuMusic1 = Resources.Load<AudioClip>("Music/Menu/01. Triumphal - AShamaluevMusic");
+        gameMusic1 = Resources.Load<AudioClip>("Music/Game/Action Sport Rock Trailer - AShamaluevMusic");
         shootingTorpedo = Resources.Load<AudioClip>("SFX/Weapons/Torpedo/Missile_sonic");
         shootingBullet = Resources.Load<AudioClip>("SFX/Weapons/Bullet/secondary_scuba");
         hitTorpedo = Resources.Load<AudioClip>("SFX/Weapons/Torpedo/missile_explosion");
