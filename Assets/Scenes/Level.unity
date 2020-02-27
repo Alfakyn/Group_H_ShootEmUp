@@ -191,7 +191,7 @@ MonoBehaviour:
   flashlight: {fileID: 1078983149}
   health_points: 50
   ink_timer: 0
-  torpedo: {fileID: 2092237294058859989, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
+  torpedo: {fileID: 326578428786369457, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
   torpedo_reload_interval: 1
   torpedo_reload_timer: 0
   bullet: {fileID: 5362876842790477443, guid: 2bc2b696f5ec2f6469a6da5268d4af51, type: 3}
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LightType: 2
-  m_BlendStyleIndex: 0
+  m_BlendStyleIndex: 1
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.06
@@ -6869,7 +6869,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.5
+      scalar: 8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -8937,7 +8937,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -10
+      scalar: -4
       minScalar: 0
       maxCurve:
         serializedVersion: 2
