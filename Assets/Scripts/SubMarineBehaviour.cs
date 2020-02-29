@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 public class SubMarineBehaviour : MonoBehaviour
 {
     //public PowerUpSpawner powerupspawner;
@@ -14,7 +15,6 @@ public class SubMarineBehaviour : MonoBehaviour
     Camera main_camera;
 
     const float MOVE_SPEED = 5f;
-    public int health_points;
 
     bool submarine_covered_in_ink;
     const float INK_FALLOFF_TIME = 10;
@@ -27,7 +27,10 @@ public class SubMarineBehaviour : MonoBehaviour
     public GameObject bullet;
     public float bullet_reload_interval;
     public float bullet_reload_timer = 0;
-    
+
+    public Slider air_meter_bar;
+    public float current_air;
+    public float air_countdown_rate;
 
     // Start is called before the first frame update
     void Start()
@@ -37,13 +40,15 @@ public class SubMarineBehaviour : MonoBehaviour
         camera_half_width = camera_half_height * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
 
         submarine_covered_in_ink = false;
+
+        air_meter_bar.maxValue = current_air;
+        air_meter_bar.value = current_air;
     }
 
     //Update is called once per frame
     void Update()
     {
-        
-        
+        checkAir();
         checkInk();
         shootTorpedo();
         shootGun();
@@ -53,8 +58,9 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         moveSubmarine();
 
-        if (health_points == 0)
+        if (current_air <= 0.0f)
         {
+            current_air = 0.0f;
             Debug.Log("Player has died");
         }
     }
@@ -71,6 +77,14 @@ public class SubMarineBehaviour : MonoBehaviour
         if (submarine_covered_in_ink == true)
         {
             flashlight.intensity = ink_timer / INK_FALLOFF_TIME;
+        }
+    }
+    void checkAir()
+    {
+        if (current_air > 0)
+        {
+            current_air -= air_countdown_rate;
+            air_meter_bar.value = current_air;
         }
     }
     void moveSubmarine()
@@ -122,10 +136,7 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            if (health_points > 0)
-            {
-                health_points--;
-            }
+            air_countdown_rate = air_countdown_rate * 1.1f;
         }
         if(collision.tag == "Ink")
         {
