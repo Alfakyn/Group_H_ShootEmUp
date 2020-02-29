@@ -147,7 +147,7 @@ public class SubMarineBehaviour : MonoBehaviour
         }
         if(collision.tag == "Spike")
         {
-            health_points--;
+            air_countdown_rate = air_countdown_rate * 1.1f;
             Destroy(collision.gameObject);
         }
 
