@@ -13,9 +13,9 @@ public class PufferfishBehaviour : MonoBehaviour
     private Camera main_camera;
     private const float PLAYER_POSITION_OFFSET = 0.2f;
     private int stamina;
-    private const int STAMINA_MAX = 100;
-    private float stamina_recharge_counter;
-    private const float STAMINA_RECHARGE_TIME = 3.0f;
+    private const int STAMINA_MAX = 200;
+    public float stamina_recharge_counter;
+    private const float STAMINA_RECHARGE_TIME = 1.0f;
 
     public GameObject spike;
     private const float SPIKE_INTERVALL = 20.0f;
@@ -24,6 +24,7 @@ public class PufferfishBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        main_camera = Camera.main;
         stamina = STAMINA_MAX;
         stamina_recharge_counter = 0.0f;
         camera_half_height = main_camera.orthographicSize;    //main_camera.orthographicSize returns the half-height of the camera in world units
@@ -32,28 +33,18 @@ public class PufferfishBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void FixedUpdate()
-    {
-        movePufferfish();
-    }
     void Update()
     {
         rechargeStamina();
     }
+    private void FixedUpdate()
+    {
+        movePufferfish();
+    }
+   
     void rechargeStamina()
     {
-        if (stamina <= 0)
-        {
-            if (stamina_recharge_counter >= STAMINA_RECHARGE_TIME)
-            {
-                stamina = STAMINA_MAX;
-                stamina_recharge_counter = 0;
-            }
-            else
-            {
-                stamina_recharge_counter += Time.deltaTime;
-            }
-        }
+       
     }
     void movePufferfish()
     {
@@ -61,6 +52,20 @@ public class PufferfishBehaviour : MonoBehaviour
         {
             rigidbody2d.velocity = -transform.right * HORIZONTAL_SPEED;
             stamina--;
+        }
+        else if (stamina <= 0)
+        {
+            if (stamina_recharge_counter > STAMINA_RECHARGE_TIME)
+            {
+                Debug.Log("Stamina_recharging");
+                stamina = STAMINA_MAX;
+                stamina_recharge_counter = 0;
+            }
+            else if (stamina_recharge_counter < STAMINA_RECHARGE_TIME)
+            {
+                rigidbody2d.velocity = -transform.right * 0;
+                stamina_recharge_counter += Time.deltaTime;
+            }
         }
     }
     void Shootspikes()
@@ -81,8 +86,8 @@ public class PufferfishBehaviour : MonoBehaviour
         {
             Debug.Log("Torpedo Collision");
             Destroy(collision.gameObject);
-            SoundManager.playSFX(SoundManager.hitTorpedo);
             Destroy(gameObject);
+            SoundManager.playSFX(SoundManager.hitTorpedo);  
         }
         if (collision.tag == "Bullet")
         {
