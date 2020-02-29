@@ -134,6 +134,11 @@ public class SubMarineBehaviour : MonoBehaviour
             ink_timer = 0f;
             Destroy(collision.gameObject);
         }
+        if(collision.tag == "Spike")
+        {
+            health_points--;
+            Destroy(collision.gameObject);
+        }
 
         //Powerup
         {
