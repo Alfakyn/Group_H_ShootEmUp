@@ -32,6 +32,10 @@ public class SubMarineBehaviour : MonoBehaviour
     public float current_air;
     public float air_countdown_rate;
 
+    public SpriteRenderer sprite_renderer;
+    private float color_timer;
+
+
     // Start is called before the first frame update
     void Start()
     { 
@@ -43,6 +47,8 @@ public class SubMarineBehaviour : MonoBehaviour
 
         air_meter_bar.maxValue = current_air;
         air_meter_bar.value = current_air;
+
+        color_timer = 1.0f;
     }
 
     //Update is called once per frame
@@ -50,15 +56,14 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         checkAir();
         checkInk();
+        displayHurtColor();
         shootTorpedo();
         shootGun();
     }
 
     private void FixedUpdate()
     {
-        moveSubmarine();
-
-        
+        moveSubmarine();        
     }
     void checkInk()
     {
@@ -87,6 +92,15 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             current_air = 0.0f;
             Debug.Log("Player has died");
+        }
+    }
+
+    void displayHurtColor()
+    {
+        if (color_timer < 1.0f)
+        {
+            sprite_renderer.color = new Color(1, color_timer, color_timer);
+            color_timer += 0.01f;
         }
     }
     void moveSubmarine()
@@ -136,20 +150,17 @@ public class SubMarineBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Enemy" || collision.tag == "Spike")
         {
             air_countdown_rate = air_countdown_rate * 1.1f;
+            sprite_renderer.color = new Color(1, 0, 0);
+            color_timer = 0.0f;
         }
         if(collision.tag == "Ink")
         {
             Debug.Log("Ink Collision");
             submarine_covered_in_ink = true;
             ink_timer = 0f;
-            Destroy(collision.gameObject);
-        }
-        if(collision.tag == "Spike")
-        {
-            air_countdown_rate = air_countdown_rate * 1.1f;
             Destroy(collision.gameObject);
         }
 

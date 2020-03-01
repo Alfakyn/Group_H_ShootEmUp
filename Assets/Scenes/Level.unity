@@ -199,6 +199,7 @@ MonoBehaviour:
   air_meter_bar: {fileID: 855654470}
   current_air: 5000
   air_countdown_rate: 0.1
+  sprite_renderer: {fileID: 68331904}
 --- !u!212 &68331904
 SpriteRenderer:
   m_ObjectHideFlags: 0
