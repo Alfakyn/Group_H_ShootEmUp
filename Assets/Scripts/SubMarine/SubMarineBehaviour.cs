@@ -147,6 +147,11 @@ public class SubMarineBehaviour : MonoBehaviour
             ink_timer = 0f;
             Destroy(collision.gameObject);
         }
+        if(collision.tag == "Spike")
+        {
+            air_countdown_rate = air_countdown_rate * 1.1f;
+            Destroy(collision.gameObject);
+        }
 
         //Powerup
         {
