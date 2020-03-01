@@ -190,7 +190,7 @@ MonoBehaviour:
   rigidbody2d: {fileID: 1291250041}
   flashlight: {fileID: 1078983149}
   ink_timer: 0
-  torpedo: {fileID: 326578428786369457, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
+  torpedo: {fileID: 1568222054061191295, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
   torpedo_reload_interval: 1
   torpedo_reload_timer: 0
   bullet: {fileID: 5362876842790477443, guid: 2bc2b696f5ec2f6469a6da5268d4af51, type: 3}

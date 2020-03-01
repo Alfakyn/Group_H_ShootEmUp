@@ -13,6 +13,7 @@ TagManager:
   - Camera Collider
   - Spike
   - Oxygen
+  - Explosion
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,7 @@ public class Swordfish1Behaviour : MonoBehaviour
 
     public int bullet_damage;
     public int torpedo_damage;
+    public int explosion_damage;
     private bool has_targeted_player = false;
     private Camera main_camera;
     private const float PLAYER_POSITION_OFFSET = 0.2f;
@@ -101,6 +102,10 @@ public class Swordfish1Behaviour : MonoBehaviour
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
             SoundManager.playSFX(SoundManager.hitTorpedo);
+        }
+        if(collision.tag == "Explosion")
+        {
+            health_points -= explosion_damage;
         }
         if (collision.tag == "Bullet")
         {

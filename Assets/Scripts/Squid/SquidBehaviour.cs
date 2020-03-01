@@ -9,6 +9,7 @@ public class SquidBehaviour : MonoBehaviour
 
     public int bullet_damage;
     public int torpedo_damage;
+    public int explosion_damage;
 
     float camera_half_width;
     private Camera main_camera;
@@ -93,6 +94,10 @@ public class SquidBehaviour : MonoBehaviour
         {
             health_points -= bullet_damage;
             Destroy(collision.gameObject);
+        }
+        if(collision.tag == "Explosion")
+        {
+            health_points -= explosion_damage;
         }
         if (collision.tag == "Torpedo")
         {

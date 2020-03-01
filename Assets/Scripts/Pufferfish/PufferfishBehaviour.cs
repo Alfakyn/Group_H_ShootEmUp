@@ -82,7 +82,11 @@ public class PufferfishBehaviour : MonoBehaviour
             Debug.Log("Torpedo Collision");
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            SoundManager.playSFX(SoundManager.hitTorpedo);  
+            SoundManager.playSFX(SoundManager.hitTorpedo);
+        }
+        if(collision.tag == "Explosion")
+        {
+            Destroy(gameObject);
         }
         if (collision.tag == "Bullet")
         {
