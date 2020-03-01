@@ -58,11 +58,7 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         moveSubmarine();
 
-        if (current_air <= 0.0f)
-        {
-            current_air = 0.0f;
-            Debug.Log("Player has died");
-        }
+        
     }
     void checkInk()
     {
@@ -85,6 +81,12 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             current_air -= air_countdown_rate;
             air_meter_bar.value = current_air;
+        }
+        
+        if (current_air <= 0.0f)
+        {
+            current_air = 0.0f;
+            Debug.Log("Player has died");
         }
     }
     void moveSubmarine()
