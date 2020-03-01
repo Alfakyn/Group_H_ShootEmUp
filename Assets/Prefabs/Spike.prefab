@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7882307314765771525}
   - component: {fileID: 322898331679027040}
-  - component: {fileID: 1692466603267578649}
   - component: {fileID: 4903676511627775040}
   - component: {fileID: 632242900091018883}
   - component: {fileID: 8164442902363540981}
+  - component: {fileID: 6275205185379720223}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Spike
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6023900c2bf6967459ed47bc0af3b0e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d4b43c7f265d1443a4d1d0efdb41a03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,34 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1692466603267578649
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8943441054052337578}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
 --- !u!50 &4903676511627775040
 Rigidbody2D:
   serializedVersion: 4
@@ -153,7 +125,7 @@ MonoBehaviour:
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: 6023900c2bf6967459ed47bc0af3b0e0,
+  m_LightCookieSprite: {fileID: 21300000, guid: 3d4b43c7f265d1443a4d1d0efdb41a03,
     type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -189,3 +161,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 4903676511627775040}
+--- !u!70 &6275205185379720223
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8943441054052337578}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.4189426, y: -0.039112102}
+  m_Size: {x: 4.0121274, y: 0.43929648}
+  m_Direction: 1

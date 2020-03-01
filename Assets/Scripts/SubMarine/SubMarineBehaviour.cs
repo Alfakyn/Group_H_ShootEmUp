@@ -31,6 +31,7 @@ public class SubMarineBehaviour : MonoBehaviour
     public Slider air_meter_bar;
     public float current_air;
     public float air_countdown_rate;
+    public float oxygen_volume;
 
     public SpriteRenderer sprite_renderer;
     private float color_timer;
@@ -152,7 +153,7 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         if (collision.tag == "Enemy" || collision.tag == "Spike")
         {
-            air_countdown_rate = air_countdown_rate * 1.1f;
+            air_countdown_rate = air_countdown_rate * 1.5f;
             sprite_renderer.color = new Color(1, 0, 0);
             color_timer = 0.0f;
         }
@@ -163,7 +164,13 @@ public class SubMarineBehaviour : MonoBehaviour
             ink_timer = 0f;
             Destroy(collision.gameObject);
         }
+        if(collision.tag =="Oxygen")
+        {
+            current_air += oxygen_volume;
+            Debug.Log("Oxygen collision");
+            Destroy(collision.gameObject);
 
+        }
         //Powerup
         {
             /* Does not work, values of submarine remain unchanged 

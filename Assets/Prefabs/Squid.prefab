@@ -104,6 +104,9 @@ MonoBehaviour:
   ink_reload_timer: 0
   ink_reload_interval: 5
   health_points: 10
+  held_Powerup: {fileID: 3213117223097795943, guid: 77ccb4a614d4b2e4484e50b8f0547edb,
+    type: 3}
+  drop_chance_percent: 1
 --- !u!50 &3245328398364575458
 Rigidbody2D:
   serializedVersion: 4

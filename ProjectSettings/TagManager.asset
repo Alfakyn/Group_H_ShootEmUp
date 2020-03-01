@@ -12,6 +12,7 @@ TagManager:
   - Ink
   - Camera Collider
   - Spike
+  - Oxygen
   layers:
   - Default
   - TransparentFX

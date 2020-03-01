@@ -13,14 +13,17 @@ public class PufferfishBehaviour : MonoBehaviour
     private Camera main_camera;
     private const float PLAYER_POSITION_OFFSET = 0.2f;
     private int stamina;
-    private const int STAMINA_MAX = 200;
+    private const int STAMINA_MAX = 125;
     public float stamina_recharge_counter;
     private const float STAMINA_RECHARGE_TIME = 1.0f;
 
     public GameObject spike;
     private const float SPIKE_INTERVALL = 20.0f;
     private const int SPIKE_MAX = 18;
-    
+
+    public GameObject held_Powerup;
+    public float drop_chance_percent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,19 +36,11 @@ public class PufferfishBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        rechargeStamina();
-    }
     private void FixedUpdate()
     {
         movePufferfish();
     }
-   
-    void rechargeStamina()
-    {
-       
-    }
+ 
     void movePufferfish()
     {
         if (stamina > 0)
@@ -64,7 +59,7 @@ public class PufferfishBehaviour : MonoBehaviour
             else if (stamina_recharge_counter < STAMINA_RECHARGE_TIME)
             {
                 rigidbody2d.velocity = -transform.right * 0;
-                stamina_recharge_counter += Time.deltaTime;
+                stamina_recharge_counter += Time.fixedDeltaTime;
             }
         }
     }
@@ -91,6 +86,11 @@ public class PufferfishBehaviour : MonoBehaviour
         }
         if (collision.tag == "Bullet")
         {
+            if (Random.Range(0.0f, 100.0f) > drop_chance_percent)
+            {
+                Debug.Log("PowerUpSpawned");
+                Instantiate(held_Powerup, transform.position, transform.rotation);
+            }
             Shootspikes();
             //SoundManager.playSound(SoundManager.hitBullet); //If bullet leaves screen triggers sound
             Destroy(collision.gameObject);

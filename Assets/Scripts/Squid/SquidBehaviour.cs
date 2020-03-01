@@ -22,6 +22,8 @@ public class SquidBehaviour : MonoBehaviour
     public float ink_reload_interval;
 
     public int health_points;
+    public GameObject held_Powerup;
+    public float drop_chance_percent;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,11 @@ public class SquidBehaviour : MonoBehaviour
     {
         if (health_points <= 0)
         {
+            if (Random.Range(0.0f, 100.0f) > drop_chance_percent)
+            {
+                Debug.Log("PowerUpSpawned");
+                Instantiate(held_Powerup, transform.position, transform.rotation);
+            }
             Destroy(gameObject);
             SoundManager.playSFX(SoundManager.testSound);
         }

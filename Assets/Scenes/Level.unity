@@ -197,8 +197,9 @@ MonoBehaviour:
   bullet_reload_interval: 0.1
   bullet_reload_timer: 0
   air_meter_bar: {fileID: 855654470}
-  current_air: 5000
+  current_air: 1000
   air_countdown_rate: 0.1
+  oxygen_volume: 200
   sprite_renderer: {fileID: 68331904}
 --- !u!212 &68331904
 SpriteRenderer:
@@ -5768,7 +5769,7 @@ RectTransform:
   m_GameObject: {fileID: 855654468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2486951, y: 1.2486951, z: 1.2486951}
   m_Children:
   - {fileID: 350228976}
   - {fileID: 632452572}
@@ -5778,7 +5779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 300}
+  m_AnchoredPosition: {x: -344, y: -253}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855654470
