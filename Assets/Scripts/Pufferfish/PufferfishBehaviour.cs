@@ -36,11 +36,16 @@ public class PufferfishBehaviour : MonoBehaviour
     {
         movePufferfish();
     }
+<<<<<<< Updated upstream
     void Update()
     {
         rechargeStamina();
     }
     void rechargeStamina()
+=======
+   
+    void movePufferfish()
+>>>>>>> Stashed changes
     {
         if (stamina <= 0)
         {
