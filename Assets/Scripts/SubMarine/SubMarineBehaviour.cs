@@ -57,7 +57,6 @@ public class SubMarineBehaviour : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        checkAir();
         checkInk();
         displayHurtColor();
         shootTorpedo();
@@ -66,6 +65,7 @@ public class SubMarineBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
+        checkAir();
         moveSubmarine();        
     }
     void checkInk()
