@@ -31,7 +31,7 @@ public class SubMarineBehaviour : MonoBehaviour
 
     public Slider air_meter_bar;
     public float current_air;
-    public float air_countdown_rate;
+    private  float air_countdown_rate;
     public float oxygen_volume;
 
     public SpriteRenderer sprite_renderer;
@@ -49,6 +49,7 @@ public class SubMarineBehaviour : MonoBehaviour
 
         air_meter_bar.maxValue = current_air;
         air_meter_bar.value = current_air;
+        air_countdown_rate = 0.1f;
 
         color_timer = 1.0f;
     }
