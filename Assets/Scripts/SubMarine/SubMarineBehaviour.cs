@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class SubMarineBehaviour : MonoBehaviour
 {
     //public PowerUpSpawner powerupspawner;
@@ -93,6 +94,8 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             current_air = 0.0f;
             Debug.Log("Player has died");
+            SoundManager.music.Stop();
+            SceneManager.LoadScene(0);
         }
     }
 
