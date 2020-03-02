@@ -35,12 +35,16 @@ public class PufferfishBehaviour : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        rechargeStamina();   
+    }
     // Update is called once per frame
     private void FixedUpdate()
     {
         movePufferfish();
     }
- 
+    
     void movePufferfish()
     {
         if (stamina > 0)
@@ -48,7 +52,11 @@ public class PufferfishBehaviour : MonoBehaviour
             rigidbody2d.velocity = -transform.right * HORIZONTAL_SPEED;
             stamina--;
         }
-        else if (stamina <= 0)
+       
+    }
+    void rechargeStamina()
+    {
+        if (stamina <= 0)
         {
             if (stamina_recharge_counter > STAMINA_RECHARGE_TIME)
             {
@@ -59,7 +67,7 @@ public class PufferfishBehaviour : MonoBehaviour
             else if (stamina_recharge_counter < STAMINA_RECHARGE_TIME)
             {
                 rigidbody2d.velocity = -transform.right * 0;
-                stamina_recharge_counter += Time.fixedDeltaTime;
+                stamina_recharge_counter += Time.deltaTime;
             }
         }
     }

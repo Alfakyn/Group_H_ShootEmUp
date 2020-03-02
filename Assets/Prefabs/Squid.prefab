@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 3245328398364575458}
-  bullet_damage: 1
+  bullet_damage: 3
   torpedo_damage: 10
-  explosion_damage: 10
+  explosion_damage: 5
   ink: {fileID: 4704480462173560315, guid: f8d8145b3cb97b243b59d269c2df2eb5, type: 3}
   ink_reload_timer: 0
   ink_reload_interval: 5

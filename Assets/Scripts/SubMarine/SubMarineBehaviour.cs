@@ -88,6 +88,10 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             current_air -= air_countdown_rate;
             air_meter_bar.value = current_air;
+            if(current_air > air_meter_bar.maxValue)
+            {
+                current_air = air_meter_bar.maxValue;
+            }
         }
         
         if (current_air <= 0.0f)

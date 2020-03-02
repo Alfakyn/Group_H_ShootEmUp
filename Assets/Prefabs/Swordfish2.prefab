@@ -152,9 +152,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 2404924463801529752}
   health_points: 10
-  bullet_damage: 2
+  bullet_damage: 4
   torpedo_damage: 10
-  explosion_damage: 10
+  explosion_damage: 5
   held_Powerup: {fileID: 3213117223097795943, guid: 77ccb4a614d4b2e4484e50b8f0547edb,
     type: 3}
   drop_chance_percent: 5
