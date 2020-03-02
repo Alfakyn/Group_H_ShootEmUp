@@ -98,12 +98,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 3245328398364575458}
-  bullet_damage: 1
+  bullet_damage: 3
   torpedo_damage: 10
+  explosion_damage: 5
   ink: {fileID: 4704480462173560315, guid: f8d8145b3cb97b243b59d269c2df2eb5, type: 3}
   ink_reload_timer: 0
   ink_reload_interval: 5
   health_points: 10
+  held_Powerup: {fileID: 3213117223097795943, guid: 77ccb4a614d4b2e4484e50b8f0547edb,
+    type: 3}
+  drop_chance_percent: 5
 --- !u!50 &3245328398364575458
 Rigidbody2D:
   serializedVersion: 4
@@ -144,7 +148,7 @@ MonoBehaviour:
   m_Intensity: 0.07
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: 6023900c2bf6967459ed47bc0af3b0e0,
+  m_LightCookieSprite: {fileID: 21300000, guid: b10764f482c580d4093036f9d8fe79ba,
     type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0

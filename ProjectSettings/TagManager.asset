@@ -11,6 +11,9 @@ TagManager:
   - Bullet
   - Ink
   - Camera Collider
+  - Spike
+  - Oxygen
+  - Explosion
   layers:
   - Default
   - TransparentFX

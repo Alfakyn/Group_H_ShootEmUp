@@ -16,10 +16,12 @@ public class Swordfish1Behaviour : MonoBehaviour
 
     public int bullet_damage;
     public int torpedo_damage;
+    public int explosion_damage;
     private bool has_targeted_player = false;
     private Camera main_camera;
     private const float PLAYER_POSITION_OFFSET = 0.2f;
-
+    public GameObject held_Powerup;
+    public float drop_chance_percent;
     public int health_points;
 
     // Start is called before the first frame update
@@ -39,6 +41,12 @@ public class Swordfish1Behaviour : MonoBehaviour
     {
         if (health_points <= 0)
         {
+
+            if (Random.Range(0.0f, 100.0f) < drop_chance_percent)
+            {
+                Debug.Log("PowerUpSpawned");
+                Instantiate(held_Powerup, transform.position, transform.rotation);
+            }
             Destroy(gameObject);
             SoundManager.playSFX(SoundManager.testSound); // ( ͡° ͜ʖ ͡°) N I C E ( ͡° ͜ʖ ͡°)
         }
@@ -94,6 +102,10 @@ public class Swordfish1Behaviour : MonoBehaviour
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
             SoundManager.playSFX(SoundManager.hitTorpedo);
+        }
+        if(collision.tag == "Explosion")
+        {
+            health_points -= explosion_damage;
         }
         if (collision.tag == "Bullet")
         {
