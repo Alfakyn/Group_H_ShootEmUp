@@ -4,46 +4,32 @@ using UnityEngine;
 
 public class PowerUpBehaviour : MonoBehaviour
 {
-    public static PowerUpSpawner powerupspawner;
-    Vector3 horizontal_speed;
+    const float HORIZONTAL_SPEED = 5.0f;
+    public Rigidbody2D rigidbody2d;
     float camera_half_width, camera_half_height;
-    const float SPEED = 0.01f;
-    PowerUpSpawner.Type type;
-    PowerUpSpawner.Type type_2;
-    PowerUpSpawner.Power power;
-    PowerUpSpawner.Power power_2;
-    SpriteRenderer sprite_renderer;
+    private Camera main_camera;
     // Start is called before the first frame update
     void Start()
     {
-        powerupspawner = GetComponent<PowerUpSpawner>();
-        horizontal_speed.Set(SPEED, 0, 0);
-        sprite_renderer = GetComponent<SpriteRenderer>();
-        camera_half_height = Camera.main.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
-        camera_half_width = Camera.main.orthographicSize * Camera.main.aspect;    //Multiply the half-height by the aspect ration to get the half-width
-        type = powerupspawner.powerUps[powerupspawner.power_up_index].type;
-        type_2 = powerupspawner.powerUps[powerupspawner.power_up_index].type_2;
-        power = powerupspawner.powerUps[powerupspawner.power_up_index].power;
-        power_2 = powerupspawner.powerUps[powerupspawner.power_up_index].power_2;
+        main_camera = Camera.main;
+        camera_half_height = main_camera.orthographicSize;    //main_camera.orthographicSize returns the half-height of the camera in world units
+        camera_half_width = camera_half_height * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
+
     }
     void moveObject()
     {
-        transform.position -= horizontal_speed;
+        rigidbody2d.velocity = -transform.right * HORIZONTAL_SPEED;
     }
     // Update is called once per frame
     void Update()
     {
         moveObject();
-        if (transform.position.x - sprite_renderer.sprite.bounds.extents.x <= -camera_half_width)
-        {
-            Destroy(gameObject, 1);
-        }
+
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.tag == "Camera Collider")
         {
-            Debug.Log("Destroy powerup");
             Destroy(gameObject);
         }
     }

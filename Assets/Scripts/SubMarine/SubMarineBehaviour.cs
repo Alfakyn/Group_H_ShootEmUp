@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class SubMarineBehaviour : MonoBehaviour
 {
     //public PowerUpSpawner powerupspawner;
@@ -30,7 +31,12 @@ public class SubMarineBehaviour : MonoBehaviour
 
     public Slider air_meter_bar;
     public float current_air;
-    public float air_countdown_rate;
+    private  float air_countdown_rate;
+    public float oxygen_volume;
+
+    public SpriteRenderer sprite_renderer;
+    private float color_timer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,26 +49,24 @@ public class SubMarineBehaviour : MonoBehaviour
 
         air_meter_bar.maxValue = current_air;
         air_meter_bar.value = current_air;
+        air_countdown_rate = 0.1f;
+
+        color_timer = 1.0f;
     }
 
     //Update is called once per frame
     void Update()
     {
-        checkAir();
         checkInk();
+        displayHurtColor();
         shootTorpedo();
         shootGun();
     }
 
     private void FixedUpdate()
     {
-        moveSubmarine();
-
-        if (current_air <= 0.0f)
-        {
-            current_air = 0.0f;
-            Debug.Log("Player has died");
-        }
+        checkAir();
+        moveSubmarine();        
     }
     void checkInk()
     {
@@ -85,6 +89,27 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             current_air -= air_countdown_rate;
             air_meter_bar.value = current_air;
+            if(current_air > air_meter_bar.maxValue)
+            {
+                current_air = air_meter_bar.maxValue;
+            }
+        }
+        
+        if (current_air <= 0.0f)
+        {
+            current_air = 0.0f;
+            Debug.Log("Player has died");
+            SoundManager.music.Stop();
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    void displayHurtColor()
+    {
+        if (color_timer < 1.0f)
+        {
+            sprite_renderer.color = new Color(1, color_timer, color_timer);
+            color_timer += 0.01f;
         }
     }
     void moveSubmarine()
@@ -134,9 +159,11 @@ public class SubMarineBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Enemy" || collision.tag == "Spike")
         {
-            air_countdown_rate = air_countdown_rate * 1.1f;
+            air_countdown_rate = air_countdown_rate * 1.5f;
+            sprite_renderer.color = new Color(1, 0, 0);
+            color_timer = 0.0f;
         }
         if(collision.tag == "Ink")
         {
@@ -145,12 +172,13 @@ public class SubMarineBehaviour : MonoBehaviour
             ink_timer = 0f;
             Destroy(collision.gameObject);
         }
-        if(collision.tag == "Spike")
+        if(collision.tag =="Oxygen")
         {
-            air_countdown_rate = air_countdown_rate * 1.1f;
+            current_air += oxygen_volume;
+            Debug.Log("Oxygen collision");
             Destroy(collision.gameObject);
-        }
 
+        }
         //Powerup
         {
             /* Does not work, values of submarine remain unchanged 

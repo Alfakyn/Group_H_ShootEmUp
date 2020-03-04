@@ -190,15 +190,17 @@ MonoBehaviour:
   rigidbody2d: {fileID: 1291250041}
   flashlight: {fileID: 1078983149}
   ink_timer: 0
-  torpedo: {fileID: 326578428786369457, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
+  torpedo: {fileID: 1568222054061191295, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
   torpedo_reload_interval: 1
   torpedo_reload_timer: 0
   bullet: {fileID: 5362876842790477443, guid: 2bc2b696f5ec2f6469a6da5268d4af51, type: 3}
   bullet_reload_interval: 0.1
   bullet_reload_timer: 0
   air_meter_bar: {fileID: 855654470}
-  current_air: 5000
+  current_air: 2000
   air_countdown_rate: 0.1
+  oxygen_volume: 200
+  sprite_renderer: {fileID: 68331904}
 --- !u!212 &68331904
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -307,58 +309,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &146233180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 146233182}
-  - component: {fileID: 146233181}
-  m_Layer: 0
-  m_Name: Spawn Location (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &146233181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146233180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  time_between_waves: 5
-  waves_timer: 0
---- !u!4 &146233182
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146233180}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4300003, y: -3.9699998, z: -0.49414062}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1411373026}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &350228975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5186,6 +5136,112 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &437327625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437327626}
+  - component: {fileID: 437327627}
+  m_Layer: 0
+  m_Name: Spawn LocationA (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &437327626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437327625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.62, y: -1.54, z: -0.49414062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1411373026}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &437327627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437327625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
+  waves_timer: 0
 --- !u!1 &455013425
 GameObject:
   m_ObjectHideFlags: 0
@@ -5520,9 +5576,9 @@ GameObject:
   - component: {fileID: 769646102}
   - component: {fileID: 769646101}
   m_Layer: 0
-  m_Name: Spawn Location (1)
+  m_Name: Spawn LocationB
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5540,183 +5596,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   time_between_waves: 5
@@ -5729,11 +5665,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769646100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4300003, y: 1.43, z: -0.49414062}
+  m_LocalPosition: {x: -0.62, y: 3.52, z: -0.49414062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1411373026}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &821726330 stripped
 RectTransform:
@@ -5767,7 +5703,7 @@ RectTransform:
   m_GameObject: {fileID: 855654468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2486951, y: 1.2486951, z: 1.2486951}
   m_Children:
   - {fileID: 350228976}
   - {fileID: 632452572}
@@ -5777,7 +5713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 300}
+  m_AnchoredPosition: {x: -344, y: -253}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855654470
@@ -6609,9 +6545,9 @@ GameObject:
   - component: {fileID: 908138560}
   - component: {fileID: 908138559}
   m_Layer: 0
-  m_Name: Spawn Location
+  m_Name: Spawn LocationA
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6630,182 +6566,62 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
     enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   time_between_waves: 5
@@ -6818,12 +6634,118 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908138558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3699999, y: 3.0900002, z: -0.49414062}
+  m_LocalPosition: {x: -0.62, y: 5.54, z: -0.49414062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1411373026}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &912386913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912386914}
+  - component: {fileID: 912386915}
+  m_Layer: 0
+  m_Name: Spawn LocationA (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &912386914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912386913}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.64, y: 1.48, z: -0.49414062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1411373026}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &912386915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912386913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
+  waves_timer: 0
 --- !u!1 &1078983147
 GameObject:
   m_ObjectHideFlags: 0
@@ -7075,7 +6997,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -7128,7 +7050,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 45
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -7243,7 +7165,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 2
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -7284,7 +7206,7 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
+          value: 0.476923
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -7296,7 +7218,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 2
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -7349,7 +7271,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 2
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -7620,7 +7542,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 6
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -16510,7 +16432,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &1373712542
+--- !u!1 &1370469598
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16518,22 +16440,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1373712544}
-  - component: {fileID: 1373712543}
+  - component: {fileID: 1370469599}
+  - component: {fileID: 1370469600}
   m_Layer: 0
-  m_Name: Spawn Location (2)
+  m_Name: Spawn LocationA (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1373712543
+--- !u!4 &1370469599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370469598}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.63, y: 4.47, z: -0.49414062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1411373026}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1370469600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373712542}
+  m_GameObject: {fileID: 1370469598}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
@@ -16541,201 +16477,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 2
-    enemy_spawn_delay: 2
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
   time_between_waves: 5
   waves_timer: 0
---- !u!4 &1373712544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373712542}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.40000057, y: -0.16, z: -0.49414062}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1411373026}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375466801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8507030978246631390, guid: 08d32dd438122ba499f2506603dd6001,
@@ -16894,232 +16696,6 @@ Transform:
   m_LocalScale: {x: 1.1406, y: 1.1406, z: 1.1406}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1590438790
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1590438792}
-  - component: {fileID: 1590438791}
-  m_Layer: 0
-  m_Name: Spawn Location (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1590438791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590438790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 2
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 4
-    enemy_spawn_delay: 2
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  time_between_waves: 5
-  waves_timer: 0
---- !u!4 &1590438792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590438790}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.40000057, y: -1.91, z: -0.49414062}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1411373026}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1616103008 stripped
@@ -21894,6 +21470,112 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1685623442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1685623443}
+  - component: {fileID: 1685623444}
+  m_Layer: 0
+  m_Name: Spawn LocationA (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1685623443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685623442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.62, y: -2.62, z: -0.49414062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1411373026}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685623444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685623442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
+  waves_timer: 0
 --- !u!1 &1701325966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8507030978167467707, guid: 08d32dd438122ba499f2506603dd6001,
@@ -21966,6 +21648,112 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1768521566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1768521567}
+  - component: {fileID: 1768521568}
+  m_Layer: 0
+  m_Name: Spawn LocationB (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1768521567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768521566}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.64, y: -0.54, z: -0.49414062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1411373026}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1768521568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768521566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
+  waves_timer: 0
 --- !u!1 &1791300308
 GameObject:
   m_ObjectHideFlags: 0
@@ -26806,6 +26594,112 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1901547954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901547955}
+  - component: {fileID: 1901547956}
+  m_Layer: 0
+  m_Name: Spawn LocationB (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1901547955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901547954}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.63, y: 0.45, z: -0.49414062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1411373026}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1901547956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901547954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
+  waves_timer: 0
 --- !u!1 &1988310320
 GameObject:
   m_ObjectHideFlags: 0
@@ -31595,6 +31489,112 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2076582718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076582719}
+  - component: {fileID: 2076582720}
+  m_Layer: 0
+  m_Name: Spawn LocationB (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2076582719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076582718}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6, y: 2.54, z: -0.49414062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1411373026}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076582720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076582718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b696c611d8bf8c542839b3d72c44f3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 5
+  waves_timer: 0
 --- !u!1001 &2836239508290230086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31605,12 +31605,12 @@ PrefabInstance:
     - target: {fileID: 2836239508140825336, guid: a2ce2e6e4c24065489691d118943a115,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.63
+      value: 8.9
       objectReference: {fileID: 0}
     - target: {fileID: 2836239508140825336, guid: a2ce2e6e4c24065489691d118943a115,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13
+      value: -1.38
       objectReference: {fileID: 0}
     - target: {fileID: 2836239508140825336, guid: a2ce2e6e4c24065489691d118943a115,
         type: 3}
