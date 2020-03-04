@@ -32,6 +32,7 @@ public class SoundManager : MonoBehaviour
         audioSources = GetComponents<AudioSource>();
         sfx = audioSources[0];
         music = audioSources[1];
+        music.loop = true;
 
         playMusic(menuMusic1);
     }
@@ -42,7 +43,8 @@ public class SoundManager : MonoBehaviour
     }
     public static void playMusic(AudioClip sound)
     {
-        music.PlayOneShot(sound);
+        music.clip = sound;
+        music.Play();
     }
 }
 
