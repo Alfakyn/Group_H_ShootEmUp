@@ -37,6 +37,12 @@ public class SubMarineBehaviour : MonoBehaviour
     public SpriteRenderer sprite_renderer;
     private float color_timer;
 
+    public static SubMarineBehaviour instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

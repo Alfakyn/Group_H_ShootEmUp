@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 1106656273103955865}
+  aimRotation: {fileID: 7624607835206202963}
 --- !u!50 &1106656273103955865
 Rigidbody2D:
   serializedVersion: 4

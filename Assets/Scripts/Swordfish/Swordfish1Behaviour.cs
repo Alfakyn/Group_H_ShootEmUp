@@ -24,6 +24,10 @@ public class Swordfish1Behaviour : MonoBehaviour
     public float drop_chance_percent;
     public int health_points;
 
+    public float rangeOfChasing;
+    private Vector3 moveDirection;
+
+
     // Start is called before the first frame update
     void Start()
     {        
@@ -55,6 +59,20 @@ public class Swordfish1Behaviour : MonoBehaviour
             checkPosition();            
             moveSwordfish();
         }
+
+        
+        //To make the enemy chase after the player.
+        if(Vector3.Distance(transform.position, SubMarineBehaviour.instance.transform.position) < rangeOfChasing)
+        {
+            moveDirection = SubMarineBehaviour.instance.transform.position - transform.position;
+        }
+        else
+        {
+            moveDirection = Vector3.zero;
+        }
+
+        moveDirection.Normalize();
+        rigidbody2d.velocity = moveDirection * HORIZONTAL_SPEED;
     }
 
     void moveSwordfish()
