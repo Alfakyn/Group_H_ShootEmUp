@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 433299375516639883}
   - component: {fileID: 7760697738587189045}
   - component: {fileID: 3508059465236482267}
+  - component: {fileID: 221694885484987651}
   m_Layer: 0
   m_Name: Pufferfish
   m_TagString: Enemy
@@ -182,3 +183,15 @@ MonoBehaviour:
   held_Powerup: {fileID: 3213117223097795943, guid: 77ccb4a614d4b2e4484e50b8f0547edb,
     type: 3}
   drop_chance_percent: 5
+--- !u!114 &221694885484987651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343372569637258338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bde6650a4bea1240a0197d0b76fce1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

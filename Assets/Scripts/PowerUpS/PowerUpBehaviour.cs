@@ -26,11 +26,4 @@ public class PowerUpBehaviour : MonoBehaviour
         moveObject();
 
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Camera Collider")
-        {
-            Destroy(gameObject);
-        }
-    }
 }

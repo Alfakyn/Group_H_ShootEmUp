@@ -43,12 +43,4 @@ public class BulletBehaviour : MonoBehaviour
     {
         rigidbody2d.velocity = transform.right * SPEED;
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Camera Collider")
-        {
-            Destroy(gameObject);
-        }
-    }
 }

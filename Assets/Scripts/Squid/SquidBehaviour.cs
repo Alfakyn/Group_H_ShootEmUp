@@ -11,8 +11,8 @@ public class SquidBehaviour : MonoBehaviour
     public int torpedo_damage;
     public int explosion_damage;
 
-    float camera_half_width;
     private Camera main_camera;
+    float camera_half_width, camera_half_height;
 
     float target_position;
     const float HORIZONTAL_SPEED = 5.0f;
@@ -30,7 +30,8 @@ public class SquidBehaviour : MonoBehaviour
     void Start()
     {
         main_camera = Camera.main;
-        camera_half_width = main_camera.orthographicSize * main_camera.aspect;    //Multiply the camera half-height by the aspect ration to get the half-width
+        camera_half_height = main_camera.orthographicSize;
+        camera_half_width = camera_half_height * main_camera.aspect;
 
         target_position = camera_half_width / 2f;
 
@@ -81,10 +82,18 @@ public class SquidBehaviour : MonoBehaviour
             if (moving_up == true) 
             {
                 rigidbody2d.velocity = transform.up * VERTICAL_SPEED;
+                if (transform.position.y > camera_half_height)
+                {
+                    moving_up = false;
+                }
             }
             else 
             {
                 rigidbody2d.velocity = -transform.up * VERTICAL_SPEED;
+                if (transform.position.y < -camera_half_height)
+                {
+                    moving_up = true;
+                }
             }
         }
     }
@@ -108,14 +117,6 @@ public class SquidBehaviour : MonoBehaviour
         if(collision.tag == "Player")
         {
             health_points -= health_points;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Camera Collider") 
-        { 
-            moving_up = !moving_up; 
         }
     }
 }

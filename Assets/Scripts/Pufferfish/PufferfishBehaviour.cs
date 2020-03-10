@@ -66,20 +66,19 @@ public class PufferfishBehaviour : MonoBehaviour
             }
             else if (stamina_recharge_counter < STAMINA_RECHARGE_TIME)
             {
-                rigidbody2d.velocity = -transform.right * 0;
+                rigidbody2d.velocity.Set(0.0f, 0.0f);
                 stamina_recharge_counter += Time.deltaTime;
             }
         }
     }
     void Shootspikes()
     {
-        Transform spike_transform = transform;
-        float spike_rotation_pos = 0;
+        float spike_rotation_angle = 0;
         for (int i = 0; i < SPIKE_MAX; i++)
         {
-            spike_rotation_pos += SPIKE_INTERVALL;
-            spike_transform.rotation *= Quaternion.Euler(0, 0, spike_rotation_pos);
-            Instantiate(spike, transform.position,spike_transform.rotation);
+            spike_rotation_angle += SPIKE_INTERVALL;
+            Quaternion spike_rotation = Quaternion.Euler(0, 0, spike_rotation_angle);
+            Instantiate(spike, transform.position, spike_rotation);
         }
       
     }
@@ -98,7 +97,7 @@ public class PufferfishBehaviour : MonoBehaviour
         }
         if (collision.tag == "Bullet")
         {
-            if (Random.Range(0.0f, 100.0f) > drop_chance_percent)
+            if (Random.Range(0.0f, 100.0f) < drop_chance_percent)
             {
                 Debug.Log("PowerUpSpawned");
                 Instantiate(held_Powerup, transform.position, transform.rotation);
@@ -114,14 +113,5 @@ public class PufferfishBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Camera Collider")
-        {
-            Destroy(gameObject);
-        }
-    }
-
 }
 

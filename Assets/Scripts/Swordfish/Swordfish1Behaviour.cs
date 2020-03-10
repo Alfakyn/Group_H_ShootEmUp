@@ -136,12 +136,4 @@ public class Swordfish1Behaviour : MonoBehaviour
             health_points = 0;
         }
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Camera Collider")
-        {
-            Destroy(gameObject);
-        }
-    }
 }

@@ -34,12 +34,5 @@ public class SpikeBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Camera Collider")
-        {
-            Destroy(gameObject);
-        }
-    }
 }
 

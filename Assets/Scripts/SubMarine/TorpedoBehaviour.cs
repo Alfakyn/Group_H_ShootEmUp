@@ -35,16 +35,12 @@ public class TorpedoBehaviour : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Enemy")
         {
             Instantiate(explosion, transform.position, transform.rotation);
             rigidbody2d.velocity = transform.right * 0;
-        }
-        if (collision.tag == "Camera Collider")
-        {
-            Destroy(gameObject);
-        }
+        }        
     }
 }
