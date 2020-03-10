@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 1306258033285633118}
   stamina_recharge_counter: 0
-  spike: {fileID: 8943441054052337578, guid: 294c9d6f483c6d346897796e8430ee9e, type: 3}
+  spike: {fileID: 6162274126611906355, guid: fbe80dd23ae960941a9ccfbc2ae49a0e, type: 3}
   held_Powerup: {fileID: 3213117223097795943, guid: 77ccb4a614d4b2e4484e50b8f0547edb,
     type: 3}
   drop_chance_percent: 5

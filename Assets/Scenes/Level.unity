@@ -197,9 +197,8 @@ MonoBehaviour:
   bullet_reload_interval: 0.1
   bullet_reload_timer: 0
   air_meter_bar: {fileID: 855654470}
-  current_air: 2000
-  air_countdown_rate: 0.1
-  oxygen_volume: 200
+  current_air: 50000
+  oxygen_volume: 500
   sprite_renderer: {fileID: 68331904}
 --- !u!212 &68331904
 SpriteRenderer:
