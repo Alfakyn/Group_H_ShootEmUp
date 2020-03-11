@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class SubMarineBehaviour : MonoBehaviour
 {
     //public PowerUpSpawner powerupspawner;
+
     public Rigidbody2D rigidbody2d;
     public UnityEngine.Experimental.Rendering.Universal.Light2D flashlight;
     float camera_half_height, camera_half_width;
@@ -15,12 +16,14 @@ public class SubMarineBehaviour : MonoBehaviour
     Camera main_camera;
 
     const float MOVE_SPEED = 5f;
+    public int health_points;
 
     bool submarine_covered_in_ink;
     const float INK_FALLOFF_TIME = 10;
     public float ink_timer = 0;
 
     public Image reload_image;
+
     public GameObject torpedo;
     public float torpedo_reload_interval;
     public float torpedo_reload_timer = 0;
@@ -31,22 +34,15 @@ public class SubMarineBehaviour : MonoBehaviour
 
     public Slider air_meter_bar;
     public float current_air;
-    private  float air_countdown_rate;
+    private float air_countdown_rate;
     public float oxygen_volume;
 
     public SpriteRenderer sprite_renderer;
     private float color_timer;
 
-    public static SubMarineBehaviour instance;
-
-    private void Awake()
-    {
-        instance = this;
-    }
-
     // Start is called before the first frame update
     void Start()
-    { 
+    {
         main_camera = Camera.main;
         camera_half_height = main_camera.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
         camera_half_width = camera_half_height * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
@@ -63,16 +59,21 @@ public class SubMarineBehaviour : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        shootTorpedo();
     }
 
     private void FixedUpdate()
     {
         shootGun();
-        shootTorpedo();
         displayHurtColor();
         checkInk();
         checkAir();
         moveSubmarine();
+
+        if (health_points == 0)
+        {
+            Debug.Log("Player has died");
+        }
     }
     void checkInk()
     {
@@ -89,18 +90,19 @@ public class SubMarineBehaviour : MonoBehaviour
             flashlight.intensity = ink_timer / INK_FALLOFF_TIME;
         }
     }
+
     void checkAir()
     {
         if (current_air > 0)
         {
             current_air -= air_countdown_rate;
             air_meter_bar.value = current_air;
-            if(current_air > air_meter_bar.maxValue)
+            if (current_air > air_meter_bar.maxValue)
             {
                 current_air = air_meter_bar.maxValue;
             }
         }
-        
+
         if (current_air <= 0.0f)
         {
             current_air = 0.0f;
@@ -118,6 +120,7 @@ public class SubMarineBehaviour : MonoBehaviour
             color_timer += 0.01f;
         }
     }
+
     void moveSubmarine()
     {
         Vector2 pos = rigidbody2d.position;
@@ -172,19 +175,20 @@ public class SubMarineBehaviour : MonoBehaviour
             sprite_renderer.color = new Color(1, 0, 0);
             color_timer = 0.0f;
         }
-        if(collision.tag == "Ink")
+        if (collision.tag == "Ink")
         {
             Debug.Log("Ink Collision");
             submarine_covered_in_ink = true;
             ink_timer = 0f;
             Destroy(collision.gameObject);
         }
-        if(collision.tag =="Oxygen")
+        if (collision.tag == "Oxygen")
         {
             current_air += oxygen_volume;
             Destroy(collision.gameObject);
 
         }
+
         //Powerup
         {
             /* Does not work, values of submarine remain unchanged 
@@ -249,7 +253,7 @@ public class SubMarineBehaviour : MonoBehaviour
 
                 }
                 */
-        
+
         }
     }
 }
