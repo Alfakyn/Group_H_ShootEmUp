@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class SubMarineBehaviour : MonoBehaviour
 {
     //public PowerUpSpawner powerupspawner;
-
     public Rigidbody2D rigidbody2d;
     public UnityEngine.Experimental.Rendering.Universal.Light2D flashlight;
     float camera_half_height, camera_half_width;
@@ -21,6 +20,7 @@ public class SubMarineBehaviour : MonoBehaviour
     const float INK_FALLOFF_TIME = 10;
     public float ink_timer = 0;
 
+    public Image reload_image;
     public GameObject torpedo;
     public float torpedo_reload_interval;
     public float torpedo_reload_timer = 0;
@@ -128,15 +128,16 @@ public class SubMarineBehaviour : MonoBehaviour
     }
     void shootTorpedo()
     {
-        if (torpedo_reload_timer > 0)
+        if (torpedo_reload_timer < torpedo_reload_interval)
         {
-            torpedo_reload_timer -= Time.deltaTime;
+            torpedo_reload_timer += Time.deltaTime;
+            reload_image.fillAmount = torpedo_reload_timer / torpedo_reload_interval;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && torpedo_reload_timer <= 0)
+        if (Input.GetKeyDown(KeyCode.Space) && torpedo_reload_timer >= torpedo_reload_interval)
         {
             Instantiate(torpedo, transform.position, transform.rotation);
-            torpedo_reload_timer = torpedo_reload_interval;
+            torpedo_reload_timer = 0;
             SoundManager.playSFX(SoundManager.shootingTorpedo);
         }
     }
