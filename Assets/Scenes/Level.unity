@@ -5483,7 +5483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.3
+  scrollSpeed: 0.01
   movement: 0
 --- !u!212 &533786592
 SpriteRenderer:
@@ -5523,7 +5523,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: beb4b0eedb42ee94b9d93520bd6b724e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5729,7 +5729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0
+  scrollSpeed: 0.1
   movement: 0
 --- !u!212 &633420220
 SpriteRenderer:
@@ -6869,7 +6869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.01
+  scrollSpeed: 0.1
   movement: 0
 --- !u!212 &905904672
 SpriteRenderer:
@@ -17198,7 +17198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.02
+  scrollSpeed: 0.05
   movement: 0
 --- !u!212 &1456244816
 SpriteRenderer:
@@ -17346,7 +17346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.3
+  scrollSpeed: 0.01
   movement: 0
 --- !u!1 &1469985352
 GameObject:
@@ -17394,7 +17394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.02
+  scrollSpeed: 0.05
   movement: 0
 --- !u!212 &1469985355
 SpriteRenderer:
@@ -22521,7 +22521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0
+  scrollSpeed: 0.1
   movement: 0
 --- !u!212 &1693499145
 SpriteRenderer:
@@ -32591,7 +32591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.3
+  scrollSpeed: 0.01
   movement: 0
 --- !u!212 &2017269751
 SpriteRenderer:
@@ -32631,7 +32631,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: beb4b0eedb42ee94b9d93520bd6b724e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -32828,7 +32828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd44542f3e19f494fa74b782053e29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.02
+  scrollSpeed: 0.05
   movement: 0
 --- !u!212 &2077656857
 SpriteRenderer:
