@@ -128,7 +128,7 @@ public class SubMarineBehaviour : MonoBehaviour
     }
     void shootTorpedo()
     {
-        if (torpedo_reload_timer < torpedo_reload_interval)
+        if (torpedo_reload_timer <= torpedo_reload_interval)
         {
             torpedo_reload_timer += Time.deltaTime;
             reload_image.fillAmount = torpedo_reload_timer / torpedo_reload_interval;

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 7848156343783379410}
-  explosion: {fileID: 3182593022233610315, guid: bf634a1eef0cda242826e30a5ff7d3a7,
+  explosion: {fileID: 7337283641098761761, guid: bf634a1eef0cda242826e30a5ff7d3a7,
     type: 3}
 --- !u!70 &6937559700886761858
 CapsuleCollider2D:
