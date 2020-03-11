@@ -16,10 +16,10 @@ public class SubMarineBehaviour : MonoBehaviour
     Camera main_camera;
 
     const float MOVE_SPEED = 5f;
-    public int health_points;
+
 
     bool submarine_covered_in_ink;
-    const float INK_FALLOFF_TIME = 10;
+    const float INK_FALLOFF_TIME = 30;
     public float ink_timer = 0;
 
     public Image reload_image;
@@ -69,11 +69,6 @@ public class SubMarineBehaviour : MonoBehaviour
         checkInk();
         checkAir();
         moveSubmarine();
-
-        if (health_points == 0)
-        {
-            Debug.Log("Player has died");
-        }
     }
     void checkInk()
     {
@@ -177,7 +172,6 @@ public class SubMarineBehaviour : MonoBehaviour
         }
         if (collision.tag == "Ink")
         {
-            Debug.Log("Ink Collision");
             submarine_covered_in_ink = true;
             ink_timer = 0f;
             Destroy(collision.gameObject);

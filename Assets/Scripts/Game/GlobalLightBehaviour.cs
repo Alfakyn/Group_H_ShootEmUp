@@ -6,7 +6,7 @@ public class GlobalLightBehaviour : MonoBehaviour
 {
     public UnityEngine.Experimental.Rendering.Universal.Light2D global_light;
     float light_intensity_timer;
-    const float BRIGHTNESS_RATE = 200;
+    const float BRIGHTNESS_RATE = 1000;
     const float MAX_BRIGHTNESS = 0.5f;
     // Start is called before the first frame update
     void Start()

@@ -32,7 +32,6 @@ public class Swordfish2Behaviour : MonoBehaviour
         {
             if (Random.Range(0.0f, 100.0f) < drop_chance_percent)
             {
-                Debug.Log("PowerUpSpawned");
                 Instantiate(held_Powerup, transform.position, transform.rotation);
             }
             Destroy(gameObject);
@@ -65,7 +64,6 @@ public class Swordfish2Behaviour : MonoBehaviour
     {
         if (collision.tag == "Torpedo")
         {
-            Debug.Log("Torpedo Collision");
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
             SoundManager.playSFX(SoundManager.hitTorpedo);

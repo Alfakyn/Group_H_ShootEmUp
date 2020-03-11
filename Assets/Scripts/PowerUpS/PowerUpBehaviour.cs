@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUpBehaviour : MonoBehaviour
 {
-    const float HORIZONTAL_SPEED = 5.0f;
+    const float HORIZONTAL_SPEED = 2.0f;
     public Rigidbody2D rigidbody2d;
     float camera_half_width, camera_half_height;
     private Camera main_camera;

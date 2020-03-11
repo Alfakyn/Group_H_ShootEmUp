@@ -60,7 +60,6 @@ public class PufferfishBehaviour : MonoBehaviour
         {
             if (stamina_recharge_counter > STAMINA_RECHARGE_TIME)
             {
-                Debug.Log("Stamina_recharging");
                 stamina = STAMINA_MAX;
                 stamina_recharge_counter = 0;
             }
@@ -86,7 +85,6 @@ public class PufferfishBehaviour : MonoBehaviour
     {
         if (collision.tag == "Torpedo")
         {
-            Debug.Log("Torpedo Collision");
             Destroy(collision.gameObject);
             Destroy(gameObject);
             SoundManager.playSFX(SoundManager.hitTorpedo);
@@ -99,7 +97,6 @@ public class PufferfishBehaviour : MonoBehaviour
         {
             if (Random.Range(0.0f, 100.0f) < drop_chance_percent)
             {
-                Debug.Log("PowerUpSpawned");
                 Instantiate(held_Powerup, transform.position, transform.rotation);
             }
             Shootspikes();

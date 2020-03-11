@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -189,7 +189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 1291250041}
   flashlight: {fileID: 1078983149}
-  health_points: 0
   ink_timer: 0
   reload_image: {fileID: 1447242840}
   torpedo: {fileID: 1568222054061191295, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
@@ -199,8 +198,8 @@ MonoBehaviour:
   bullet_reload_interval: 0.1
   bullet_reload_timer: 0
   air_meter_bar: {fileID: 855654470}
-  current_air: 50000
-  oxygen_volume: 500
+  current_air: 1000
+  oxygen_volume: 200
   sprite_renderer: {fileID: 68331904}
 --- !u!212 &68331904
 SpriteRenderer:
@@ -5182,20 +5181,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 10
     enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -5230,18 +5229,18 @@ MonoBehaviour:
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 3
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 10
+    enemy_count: 5
     enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 5
+  time_between_waves: 40
   waves_timer: 0
 --- !u!1 &519420028
 GameObject:
@@ -5613,13 +5612,13 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -5630,8 +5629,20 @@ MonoBehaviour:
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -5643,19 +5654,7 @@ MonoBehaviour:
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -5666,12 +5665,12 @@ MonoBehaviour:
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 5
+  time_between_waves: 30
   waves_timer: 0
 --- !u!4 &769646102
 Transform:
@@ -6582,37 +6581,37 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
     enemy_count: 5
     enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
+    enemy_count: 2
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -6624,23 +6623,23 @@ MonoBehaviour:
     enemy_index: 0
   - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 10
+    enemy_count: 5
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
+    enemy_count: 4
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 5
+  time_between_waves: 50
   waves_timer: 0
 --- !u!4 &908138560
 Transform:
@@ -6701,32 +6700,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
+    enemy_count: 2
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -6738,29 +6737,29 @@ MonoBehaviour:
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
+    enemy_count: 4
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 10
-    enemy_spawn_delay: 1.5
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 2.5
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 5
+  time_between_waves: 15
   waves_timer: 0
 --- !u!1 &1078983147
 GameObject:
@@ -16494,65 +16493,65 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
     enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 5
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 20
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 2
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 40
   waves_timer: 0
 --- !u!1 &1375466801 stripped
 GameObject:
@@ -16578,7 +16577,7 @@ GameObject:
   - component: {fileID: 1447242841}
   - component: {fileID: 1447242840}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Torpedo Reload Feedback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21606,19 +21605,19 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 3
     enemy_spawn_delay: 1.5
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -21642,29 +21641,29 @@ MonoBehaviour:
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
     enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 5
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 3
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 50
   waves_timer: 0
 --- !u!1 &1701325966 stripped
 GameObject:
@@ -21783,26 +21782,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: 
-    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
+    enemy_count: 2
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 3
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -21814,7 +21813,7 @@ MonoBehaviour:
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -21826,7 +21825,7 @@ MonoBehaviour:
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -21837,12 +21836,12 @@ MonoBehaviour:
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 5
+  time_between_waves: 30
   waves_timer: 0
 --- !u!1 &1791300308
 GameObject:
@@ -26729,66 +26728,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: 
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 5
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 15
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
+    enemy_count: 4
+    enemy_spawn_delay: 1.5
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 15
     enemy_spawn_delay: 2
     enemy_spawn_timer: 0
     enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1.5
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  time_between_waves: 5
+  time_between_waves: 20
   waves_timer: 0
 --- !u!1 &1988310320
 GameObject:
@@ -31625,13 +31624,13 @@ MonoBehaviour:
   waves:
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
     enemy: {fileID: 2663574125054305730, guid: bca2a71cbeabcec46b4742ce366f79c0, type: 3}
-    enemy_count: 20
+    enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -31642,8 +31641,8 @@ MonoBehaviour:
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
-    enemy_count: 5
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 2
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
@@ -31655,35 +31654,35 @@ MonoBehaviour:
     enemy_index: 0
   - name: 
     enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
-    enemy_count: 5
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
-    enemy_count: 20
-    enemy_spawn_delay: 1
-    enemy_spawn_timer: 0
-    enemy_index: 0
-  - name: 
-    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
     enemy_count: 10
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
   - name: 
-    enemy: {fileID: 7358558262894295835, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
     enemy_count: 5
     enemy_spawn_delay: 1
     enemy_spawn_timer: 0
     enemy_index: 0
-  time_between_waves: 5
+  - name: 
+    enemy: {fileID: 6204781261124245445, guid: 1bc6f641c4d7c2649a5292001a48a127, type: 3}
+    enemy_count: 10
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4944038132330559429, guid: 8632104199ecb824980d459f8cc0a4d9, type: 3}
+    enemy_count: 4
+    enemy_spawn_delay: 1
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  - name: 
+    enemy: {fileID: 4343372569637258337, guid: 189587c7a8e427a4c8952c4a4f478ea8, type: 3}
+    enemy_count: 15
+    enemy_spawn_delay: 2
+    enemy_spawn_timer: 0
+    enemy_index: 0
+  time_between_waves: 20
   waves_timer: 0
 --- !u!1001 &2836239508290230086
 PrefabInstance:

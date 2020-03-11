@@ -109,7 +109,7 @@ MonoBehaviour:
   held_Powerup: {fileID: 3213117223097795943, guid: 77ccb4a614d4b2e4484e50b8f0547edb,
     type: 3}
   drop_chance_percent: 5
-  sprite_renderer: {fileID: 0}
+  sprite_renderer: {fileID: 1675242602944102061}
 --- !u!50 &3996766913911434752
 Rigidbody2D:
   serializedVersion: 4
