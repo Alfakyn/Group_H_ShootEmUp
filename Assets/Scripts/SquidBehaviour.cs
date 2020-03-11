@@ -23,6 +23,9 @@ public class SquidBehaviour : MonoBehaviour
 
     public int health_points;
 
+    public SpriteRenderer sprite_renderer;
+    private float color_timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,8 @@ public class SquidBehaviour : MonoBehaviour
         target_position = camera_half_width / 2f;
 
         moving_up = (Random.value > 0.5f); //Random.value returns a number between 0 and 1. This line initializes a boolean randomly with true or false at ~50% chance each
+
+        color_timer = 1.0f;
     }
 
     // Update is called once per frame
@@ -51,9 +56,18 @@ public class SquidBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movesquid();        
+        movesquid();
+        displayHurtColor();
     }
 
+    void displayHurtColor()
+    {
+        if (color_timer < 1.0f)
+        {
+            sprite_renderer.color = new Color(1, color_timer, color_timer);
+            color_timer += 0.01f;
+        }
+    }
     void shootInk()
     {
         if (ink_reload_timer <= 0)
@@ -86,6 +100,9 @@ public class SquidBehaviour : MonoBehaviour
         {
             health_points -= bullet_damage;
             Destroy(collision.gameObject);
+
+            sprite_renderer.color = new Color(1, 0, 0);
+            color_timer = 0.0f;
         }
         if (collision.tag == "Torpedo")
         {

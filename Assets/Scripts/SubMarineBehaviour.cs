@@ -27,7 +27,18 @@ public class SubMarineBehaviour : MonoBehaviour
     public GameObject bullet;
     public float bullet_reload_interval;
     public float bullet_reload_timer = 0;
+<<<<<<< Updated upstream:Assets/Scripts/SubMarineBehaviour.cs
     
+=======
+
+    public Slider air_meter_bar;
+    public float current_air;
+    private  float air_countdown_rate;
+    public float oxygen_volume;
+
+    public SpriteRenderer sprite_renderer;
+    private float color_timer;
+>>>>>>> Stashed changes:Assets/Scripts/SubMarine/SubMarineBehaviour.cs
 
     // Start is called before the first frame update
     void Start()
@@ -42,15 +53,26 @@ public class SubMarineBehaviour : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream:Assets/Scripts/SubMarineBehaviour.cs
         
         
         checkInk();
         shootTorpedo();
         shootGun();
+=======
+        shootTorpedo();
+>>>>>>> Stashed changes:Assets/Scripts/SubMarine/SubMarineBehaviour.cs
     }
 
     private void FixedUpdate()
     {
+<<<<<<< Updated upstream:Assets/Scripts/SubMarineBehaviour.cs
+=======
+        shootGun();
+        displayHurtColor();
+        checkInk();
+        checkAir();
+>>>>>>> Stashed changes:Assets/Scripts/SubMarine/SubMarineBehaviour.cs
         moveSubmarine();
 
         if (health_points == 0)
