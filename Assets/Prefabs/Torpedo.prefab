@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5973226721051201163}
   - component: {fileID: 2981600141588286227}
   - component: {fileID: 7949177648027330851}
+  - component: {fileID: 4127810192927454950}
   - component: {fileID: 6937559700886761858}
   - component: {fileID: 7848156343783379410}
   - component: {fileID: 6755296072124263528}
@@ -103,6 +104,22 @@ MonoBehaviour:
   rigidbody2d: {fileID: 7848156343783379410}
   explosion: {fileID: 7337283641098761761, guid: bf634a1eef0cda242826e30a5ff7d3a7,
     type: 3}
+--- !u!58 &4127810192927454950
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568222054061191295}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 8.579115, y: 0.03714338}
+  serializedVersion: 2
+  m_Radius: 5.8583746
 --- !u!70 &6937559700886761858
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

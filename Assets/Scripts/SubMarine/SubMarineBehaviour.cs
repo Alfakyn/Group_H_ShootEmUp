@@ -182,7 +182,6 @@ public class SubMarineBehaviour : MonoBehaviour
         if(collision.tag =="Oxygen")
         {
             current_air += oxygen_volume;
-            Debug.Log("Oxygen collision");
             Destroy(collision.gameObject);
 
         }

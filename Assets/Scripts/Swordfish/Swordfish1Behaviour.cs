@@ -48,7 +48,6 @@ public class Swordfish1Behaviour : MonoBehaviour
 
             if (Random.Range(0.0f, 100.0f) < drop_chance_percent)
             {
-                Debug.Log("PowerUpSpawned");
                 Instantiate(held_Powerup, transform.position, transform.rotation);
             }
             Destroy(gameObject);

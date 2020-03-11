@@ -55,7 +55,6 @@ public class Swordfish2Behaviour : MonoBehaviour
     {
         if (collision.tag == "Torpedo")
         {
-            Debug.Log("Torpedo Collision");
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
             SoundManager.playSFX(SoundManager.hitTorpedo);
