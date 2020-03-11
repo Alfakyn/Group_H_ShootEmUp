@@ -85,9 +85,12 @@ public class Swordfish1Behaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag == "Explosion")
+        {
+            health_points -= health_points;
+        }
         if (collision.tag == "Torpedo")
         {
-            Debug.Log("Torpedo Collision");
             health_points -= torpedo_damage;
             Destroy(collision.gameObject);
             SoundManager.playSFX(SoundManager.hitTorpedo);
@@ -107,11 +110,11 @@ public class Swordfish1Behaviour : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Camera Collider")
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Camera Collider")
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 }
