@@ -119,11 +119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LightType: 2
+  m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.58
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Color: {r: 0.27058825, g: 0.9843137, b: 0.3647059, a: 1}
+  m_Intensity: 0.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: dc14e5adc26b9af45ad9568eddd542e3,
@@ -145,10 +145,10 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  - {x: -0.11643882, y: -0.09586974, z: 0}
+  - {x: 0.46093884, y: -0.3756043, z: 0}
+  - {x: 1.9973719, y: 0.091054626, z: 0}
+  - {x: 0.41943765, y: 0.27309573, z: 0}
 --- !u!70 &8505819073272421205
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
