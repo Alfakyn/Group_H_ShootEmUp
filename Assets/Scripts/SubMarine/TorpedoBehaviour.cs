@@ -8,6 +8,7 @@ public class TorpedoBehaviour : MonoBehaviour
     const float SPEED = 10.0f;
 
     public GameObject explosion;
+    public GameObject explosion_glow;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class TorpedoBehaviour : MonoBehaviour
         if(collision.tag == "Enemy")
         {
             Instantiate(explosion, transform.position, transform.rotation);
+            Instantiate(explosion_glow, transform.position, transform.rotation);
             rigidbody2d.velocity = transform.right * 0;
         }        
     }

@@ -104,6 +104,8 @@ MonoBehaviour:
   rigidbody2d: {fileID: 7848156343783379410}
   explosion: {fileID: 7337283641098761761, guid: bf634a1eef0cda242826e30a5ff7d3a7,
     type: 3}
+  explosion_glow: {fileID: 2046498376117011169, guid: 69497759025407547b5de29687baf611,
+    type: 3}
 --- !u!58 &4127810192927454950
 CircleCollider2D:
   m_ObjectHideFlags: 0
