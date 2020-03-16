@@ -14,7 +14,7 @@ public class GuillemsParallax : MonoBehaviour
         main_camera = Camera.main; //Store Camera.main reference in a variable to use below
         camera_half_width = main_camera.orthographicSize * main_camera.aspect; //Store the screen's half-width value in a variable
 
-        sprite_half_width = GetComponent<SpriteRenderer>().bounds.size.x / 2;
+        sprite_half_width = GetComponent<SpriteRenderer>().bounds.size.x / 2 * transform.localScale.x;
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class GuillemsParallax : MonoBehaviour
 
     if (transform.position.x < -camera_half_width - sprite_half_width) 
 
-        transform.position = new Vector3(camera_half_width*2, 0);
+        transform.position = new Vector3(camera_half_width * 2, transform.position.y);
     
     else
     
