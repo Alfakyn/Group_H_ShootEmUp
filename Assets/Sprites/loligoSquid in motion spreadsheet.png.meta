@@ -129,8 +129,8 @@ TextureImporter:
         y: 1457
         width: 2120
         height: 558
-      alignment: 9
-      pivot: {x: 0.99110144, y: 0.4937392}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,8 +150,8 @@ TextureImporter:
         y: 1389
         width: 2021
         height: 635
-      alignment: 9
-      pivot: {x: 0.98997414, y: 0.5407123}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,8 +171,8 @@ TextureImporter:
         y: 1214
         width: 1954
         height: 946
-      alignment: 9
-      pivot: {x: 0.9889152, y: 0.5465315}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,8 +192,8 @@ TextureImporter:
         y: 1221
         width: 2021
         height: 979
-      alignment: 9
-      pivot: {x: 0.99135685, y: 0.5164152}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,8 +213,8 @@ TextureImporter:
         y: 115
         width: 1908
         height: 946
-      alignment: 9
-      pivot: {x: 0.9885072, y: 0.49083602}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,8 +234,8 @@ TextureImporter:
         y: 29
         width: 1921
         height: 901
-      alignment: 9
-      pivot: {x: 0.9893816, y: 0.6075376}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,12 +251,12 @@ TextureImporter:
       name: loligoSquid in motion spreadsheet_10
       rect:
         serializedVersion: 2
-        x: 4828
-        y: 84
+        x: 4859
+        y: 53
         width: 2026
         height: 796
-      alignment: 9
-      pivot: {x: 0.98905104, y: 0.61884004}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,8 +276,8 @@ TextureImporter:
         y: 151
         width: 2161
         height: 621
-      alignment: 9
-      pivot: {x: 0.990679, y: 0.6872298}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
