@@ -48,7 +48,7 @@ public class SquidBehaviour : MonoBehaviour
     {
         if (health_points <= 0)
         {
-            if (Random.Range(0.0f, 100.0f) > drop_chance_percent)
+            if (Random.Range(0.0f, 100.0f) < drop_chance_percent)
             {
 
                 Instantiate(held_Powerup, transform.position, transform.rotation);
