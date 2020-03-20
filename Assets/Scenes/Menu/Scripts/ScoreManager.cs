@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     public List<Score> scoreboard = new List<Score>();
-    static JsonWrapper wrapper;
+    public static JsonWrapper wrapper;
     public Text leaderboard;
     public Text inputText;
     static Transform canvasTransform;
@@ -70,12 +70,10 @@ public class ScoreManager : MonoBehaviour
         wrapper.scoreboard.Add(score);
         string playerScoreData = JsonUtility.ToJson(wrapper, true);
 
-        //Saves data
+        //Saves data to json-file
         File.WriteAllText(Path(), playerScoreData);
         Debug.Log("Player score was saved to: " + Path());
         Debug.Log("Scoreboard now contains " + wrapper.scoreboard.Count + " scores");
-
-        SortScoreboard();
     }
      
 
@@ -98,6 +96,7 @@ public class ScoreManager : MonoBehaviour
                     scoreboard.Add(wrapper.scoreboard[i]);
                     Debug.Log("Score loaded: " + scoreboard[i].name + " has " + scoreboard[i].score + " points.");
                 }
+                SortScoreboard();
             }
             else //Do this only if LoadWrapper == null
             {
@@ -111,15 +110,10 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public static void SortScoreboard()
+    public void SortScoreboard()
     {
-        //Should loop through the list. Sorts scores with highest score at the top. Should resave scores as well using saveToScoreboard() function
-
-        //for (int i = 0; i < scoreboard.Count; i++)
-        //{
-            //Compare to next index. if smaller, move down.
-        //}
-        //scoreboard.Sort((a, b) => b.score.CompareTo(a.score));
+        scoreboard.Sort((a, b) => b.score.CompareTo(a.score));
+        Debug.Log("Scoreboard Sorted");
     }
 
     public void DisplayScoreboard()

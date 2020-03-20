@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject optionsMenu;
@@ -17,6 +14,7 @@ public class PauseMenu : MonoBehaviour
             if (gameIsPaused)
             {
                 Resume();
+                //If you press escape when in optionsMenu
                 if (optionsMenu.activeSelf)
                 {
                     optionsMenu.SetActive(false);
@@ -33,8 +31,7 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
-        }
-        
+        }  
     }
 
     void Pause()
@@ -71,6 +68,5 @@ public class PauseMenu : MonoBehaviour
         Resume();
         SoundManager.music.Stop();
         SceneManager.LoadScene(0);
-
     }
 }
