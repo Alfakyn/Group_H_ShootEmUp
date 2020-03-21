@@ -8,9 +8,9 @@ public class SoundManager : MonoBehaviour
     public static AudioClip shootingTorpedo;
     public static AudioClip shootingBullet;
     public static AudioClip hitTorpedo;
-    //public static AudioClip hitBullet;
+    public static AudioClip buttonClick;
 
-    public static AudioSource [] audioSources;
+    public static AudioSource[] audioSources;
     public static AudioSource sfx;
     public static AudioSource music;
 
@@ -27,7 +27,7 @@ public class SoundManager : MonoBehaviour
         shootingTorpedo = Resources.Load<AudioClip>("SFX/Weapons/Torpedo/Missile_sonic");
         shootingBullet = Resources.Load<AudioClip>("SFX/Weapons/Bullet/secondary_scuba");
         hitTorpedo = Resources.Load<AudioClip>("SFX/Weapons/Torpedo/missile_explosion");
-        //hitBullet = Resources.Load<AudioClip>("SFX/Weapons/Bullet/hit_bullet");
+        buttonClick = Resources.Load<AudioClip>("SFX/Implemented resources 18th/Menu Selection Hover 2");
 
         audioSources = GetComponents<AudioSource>();
         sfx = audioSources[0];

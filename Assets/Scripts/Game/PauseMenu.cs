@@ -1,31 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
-    // Start is called before the first frame update
+    public GameObject optionsMenu;
+    public static bool isPausable = true;
 
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && isPausable == true)
         {
             if (gameIsPaused)
             {
                 Resume();
+                //If you press escape when in optionsMenu
+                if (optionsMenu.activeSelf)
+                {
+                    optionsMenu.SetActive(false);
+
+                    //Makes all buttons in pauseMenu active again (for next time when opening the pauseMenu
+                    pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
+                    pauseMenuUI.transform.GetChild(1).gameObject.SetActive(true);
+                    pauseMenuUI.transform.GetChild(2).gameObject.SetActive(true);
+                    pauseMenuUI.transform.GetChild(3).gameObject.SetActive(true);
+                    pauseMenuUI.transform.GetChild(4).gameObject.SetActive(true);
+                }
             }
             else
             {
                 Pause();
             }
         }
-        
     }
 
     void Pause()
@@ -62,6 +69,9 @@ public class PauseMenu : MonoBehaviour
         Resume();
         SoundManager.music.Stop();
         SceneManager.LoadScene(0);
-
+    }
+    public void playButtonSound()
+    {
+        SoundManager.playSFX(SoundManager.buttonClick);
     }
 }
