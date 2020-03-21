@@ -3461,6 +3461,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1963643658}
+        m_MethodName: StoreScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 200
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1770713268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3538,6 +3549,7 @@ MonoBehaviour:
   scoreboard: []
   leaderboard: {fileID: 854135711}
   inputText: {fileID: 631689794}
+  canvas: {fileID: 164879803}
 --- !u!224 &1963643659
 RectTransform:
   m_ObjectHideFlags: 0

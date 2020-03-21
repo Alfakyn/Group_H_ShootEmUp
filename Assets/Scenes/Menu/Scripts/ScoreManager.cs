@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     public static JsonWrapper wrapper;
     public Text leaderboard;
     public Text inputText;
-    static Transform canvasTransform;
+    public Canvas canvas;
     public static ScoreManager scoreManager;
     static int playerScore = 0;
 
@@ -23,14 +23,14 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        canvasTransform = transform.GetChild(0);
-        canvasTransform.gameObject.SetActive(false);
+        LoadScoreBoard();
     }
 
-    public void SetScore(int score)
+    public void StoreScore(int score)
     {
         playerScore = score;
         Debug.Log("Score: " + playerScore);
+        PauseMenu.isPausable = false;
         scoreManager.InputPlayerName();
     }
 
@@ -49,9 +49,8 @@ public class ScoreManager : MonoBehaviour
 
     public void InputPlayerName()
     {
-        canvasTransform.gameObject.SetActive(true);
+        scoreManager.canvas.gameObject.SetActive(true);
         Time.timeScale = 0f;
-        Debug.Log("Input Name");
     }
 
 
@@ -67,6 +66,10 @@ public class ScoreManager : MonoBehaviour
         //And if the file does exist, load the data from it
 
         // serializes (converts) Score "data" to json format
+        if (wrapper == null)
+        {
+            wrapper = new JsonWrapper();
+        }
         wrapper.scoreboard.Add(score);
         string playerScoreData = JsonUtility.ToJson(wrapper, true);
 
@@ -80,10 +83,8 @@ public class ScoreManager : MonoBehaviour
     public void LoadScoreBoard()
     {
         //load all data from "path"
-        
         if(File.Exists(Path()))
         {
-            Debug.Log("Loading data...");
             scoreboard.Clear();
             string data = File.ReadAllText(Path());
             wrapper = JsonUtility.FromJson<JsonWrapper>(data);
@@ -113,6 +114,10 @@ public class ScoreManager : MonoBehaviour
     public void SortScoreboard()
     {
         scoreboard.Sort((a, b) => b.score.CompareTo(a.score));
+        //if (scoreboard.Count > 3)
+        //{
+        //    scoreboard.RemoveAt(4);
+        //}
         Debug.Log("Scoreboard Sorted");
     }
 
@@ -122,6 +127,7 @@ public class ScoreManager : MonoBehaviour
         for (int i = 0; i < scoreboard.Count; i++)
         {
             //Add cap so that it will stop adding scores to text.text after the 10th score
+
             leaderboard.text += i +1 + ". " + scoreboard[i].name + ":\t" + scoreboard[i].score + "\n";
         }
     }
