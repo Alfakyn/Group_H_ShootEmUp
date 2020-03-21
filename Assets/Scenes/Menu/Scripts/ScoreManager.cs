@@ -43,6 +43,7 @@ public class ScoreManager : MonoBehaviour
         score.score = playerScore;
         SaveToScoreboard(score);
         Time.timeScale = 1f;
+        PauseMenu.isPausable = true;
         SceneManager.LoadScene(0);
     }
 
