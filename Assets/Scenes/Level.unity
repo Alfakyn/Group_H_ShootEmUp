@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -838,27 +838,27 @@ PrefabInstance:
     - target: {fileID: 3079284115374840789, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3079284115374840789, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3249790085330641955, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3249790085330641955, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3249790085330641955, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3278623820375776978, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
@@ -893,17 +893,17 @@ PrefabInstance:
     - target: {fileID: 5124870377929403139, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5124870377929403139, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5124870377929403139, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5470877808834440894, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
@@ -928,12 +928,12 @@ PrefabInstance:
     - target: {fileID: 5479893838258283695, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5479893838258283695, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6618915094454722568, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
@@ -960,6 +960,11 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1375466801}
+    - target: {fileID: 8507030977428794604, guid: 08d32dd438122ba499f2506603dd6001,
+        type: 3}
+      propertyPath: optionsMenu
+      value: 
+      objectReference: {fileID: 1573355018}
     - target: {fileID: 8507030977428794607, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_LocalPosition.x
