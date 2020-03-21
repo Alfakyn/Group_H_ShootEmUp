@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct Score
+public class Score
 {
-        public int score;
-        public string name;
+    public int score = 0;
+    public string name = "";
 }
