@@ -8,8 +8,12 @@ public class PauseMenu : MonoBehaviour
 
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+<<<<<<< HEAD
     // Start is called before the first frame update
 
+=======
+    public GameObject optionsMenu;
+>>>>>>> parent of 0e4646e... Minor Fix for ScoreManager
 
     // Update is called once per frame
     void Update()
