@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1073788716609106564}
   - component: {fileID: 3230866670876413056}
   - component: {fileID: 6766587965910822883}
+  - component: {fileID: 2026932058567116794}
   m_Layer: 0
   m_Name: Swordfish
   m_TagString: Enemy
@@ -76,13 +77,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4337947202167728383, guid: e5aec928f269b754db7cf4ca4867b249,
+  m_Sprite: {fileID: 4337947202167728383, guid: c0bb71f6747e40d459c86733c5989423,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 33.420002, y: 16.710001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -143,8 +144,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.41392, y: -1.0611414}
-  m_Size: {x: 37.77143, y: 6.9151764}
+  m_Offset: {x: 6.3862987, y: 0.037274003}
+  m_Size: {x: 21.594662, y: 4.4522133}
   m_Direction: 1
 --- !u!70 &1073788716609106564
 CapsuleCollider2D:
@@ -159,8 +160,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -19.135817, y: -0.8662135}
-  m_Size: {x: 23.6037, y: 1.392069}
+  m_Offset: {x: -10.21527, y: 0.2987968}
+  m_Size: {x: 12.153552, y: 0.92609805}
   m_Direction: 1
 --- !u!114 &3230866670876413056
 MonoBehaviour:
@@ -184,7 +185,7 @@ Animator:
   m_GameObject: {fileID: 2663574125054305729}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b7b4e124d7dca7344aed40380d9a352c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6b5361b37de775543b5bfa1332f16956, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -193,3 +194,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2026932058567116794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663574125054305729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 2
+  m_BlendStyleIndex: 1
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.5
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 0000000039acec78
+  m_LightCookieSprite: {fileID: 3856959464804164633, guid: 58f0bfe860197794ab537c96438c1bf6,
+    type: 3}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
