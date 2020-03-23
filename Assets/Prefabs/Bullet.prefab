@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be9dbb94d67c14d41a783b74160f6906, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0422a62687aba374bbc120f47351e7b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.18, y: 0.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Intensity: 0.2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: be9dbb94d67c14d41a783b74160f6906,
+  m_LightCookieSprite: {fileID: 21300000, guid: 0422a62687aba374bbc120f47351e7b5,
     type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
