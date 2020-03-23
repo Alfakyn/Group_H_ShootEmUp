@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6877477045576516254, guid: 479effcf87307e247ae31d2874c7503f,
+  m_Sprite: {fileID: 6877477045576516254, guid: 649720e0a6d4914458857b913467ab0c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Intensity: 1.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: -209827215896321189, guid: 0f344580b9ecff84faf37f86a5248fd9,
+  m_LightCookieSprite: {fileID: -209827215896321189, guid: 03fa1bbb0e6d5b4408858c04c6896fcc,
     type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0

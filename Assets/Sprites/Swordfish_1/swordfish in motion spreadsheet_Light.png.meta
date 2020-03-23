@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 71d3cbb147ca2c744b8360b019aeea80
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3856959464804164633
+    second: swordfish in motion spreadsheet_Light_0
+  - first:
+      213: 3415052235374795997
+    second: swordfish in motion spreadsheet_Light_1
+  - first:
+      213: -8127729116562015739
+    second: swordfish in motion spreadsheet_Light_2
+  - first:
+      213: -8480323480954892012
+    second: swordfish in motion spreadsheet_Light_3
+  - first:
+      213: -62200841798065822
+    second: swordfish in motion spreadsheet_Light_4
+  - first:
+      213: 4408560516060538902
+    second: swordfish in motion spreadsheet_Light_5
+  - first:
+      213: 6361949363507752951
+    second: swordfish in motion spreadsheet_Light_6
+  - first:
+      213: -7865726840583868788
+    second: swordfish in motion spreadsheet_Light_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +94,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: swordfish in motion spreadsheet_Light_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1671
+        width: 3341
+        height: 1671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914abbcb23ca68530800000000000000
+      internalID: 3856959464804164633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swordfish in motion spreadsheet_Light_1
+      rect:
+        serializedVersion: 2
+        x: 3341
+        y: 1671
+        width: 3341
+        height: 1671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc1be21ae3b46f20800000000000000
+      internalID: 3415052235374795997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swordfish in motion spreadsheet_Light_2
+      rect:
+        serializedVersion: 2
+        x: 6682
+        y: 1671
+        width: 3341
+        height: 1671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ab8b85e61843f80800000000000000
+      internalID: -8127729116562015739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swordfish in motion spreadsheet_Light_3
+      rect:
+        serializedVersion: 2
+        x: 10023
+        y: 1671
+        width: 3341
+        height: 1671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411974989b6df4a80800000000000000
+      internalID: -8480323480954892012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swordfish in motion spreadsheet_Light_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3341
+        height: 1671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26165e7f9a4032ff0800000000000000
+      internalID: -62200841798065822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swordfish in motion spreadsheet_Light_5
+      rect:
+        serializedVersion: 2
+        x: 3341
+        y: 0
+        width: 3341
+        height: 1671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618e99a8e6a5e2d30800000000000000
+      internalID: 4408560516060538902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swordfish in motion spreadsheet_Light_6
+      rect:
+        serializedVersion: 2
+        x: 6682
+        y: 0
+        width: 3341
+        height: 1671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ffe6e23d3f2a4850800000000000000
+      internalID: 6361949363507752951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swordfish in motion spreadsheet_Light_7
+      rect:
+        serializedVersion: 2
+        x: 10023
+        y: 0
+        width: 3341
+        height: 1671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e2eb6ec1357d290800000000000000
+      internalID: -7865726840583868788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

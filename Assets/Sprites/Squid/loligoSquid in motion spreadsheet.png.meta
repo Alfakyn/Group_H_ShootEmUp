@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 649720e0a6d4914458857b913467ab0c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6877477045576516254
+    second: loligoSquid in motion spreadsheet_0
+  - first:
+      213: 7222955836511442997
+    second: loligoSquid in motion spreadsheet_1
+  - first:
+      213: -3945222550604624100
+    second: loligoSquid in motion spreadsheet_2
+  - first:
+      213: -6329294607711304106
+    second: loligoSquid in motion spreadsheet_3
+  - first:
+      213: 6837651845194590648
+    second: loligoSquid in motion spreadsheet_4
+  - first:
+      213: 5950295639953319745
+    second: loligoSquid in motion spreadsheet_5
+  - first:
+      213: -1092819623595450074
+    second: loligoSquid in motion spreadsheet_6
+  - first:
+      213: -2141775536676591472
+    second: loligoSquid in motion spreadsheet_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +94,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: loligoSquid in motion spreadsheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1153
+        width: 2305
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92cd7c3fe4b17f50800000000000000
+      internalID: 6877477045576516254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loligoSquid in motion spreadsheet_1
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 1153
+        width: 2305
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538599f70181d3460800000000000000
+      internalID: 7222955836511442997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loligoSquid in motion spreadsheet_2
+      rect:
+        serializedVersion: 2
+        x: 4610
+        y: 1153
+        width: 2305
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fc95f2ef0cf39c0800000000000000
+      internalID: -3945222550604624100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loligoSquid in motion spreadsheet_3
+      rect:
+        serializedVersion: 2
+        x: 6915
+        y: 1153
+        width: 2305
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656829c9614d928a0800000000000000
+      internalID: -6329294607711304106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loligoSquid in motion spreadsheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2305
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b92e92302834ee50800000000000000
+      internalID: 6837651845194590648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loligoSquid in motion spreadsheet_5
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 0
+        width: 2305
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14729f7cb52b39250800000000000000
+      internalID: 5950295639953319745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loligoSquid in motion spreadsheet_6
+      rect:
+        serializedVersion: 2
+        x: 4610
+        y: 0
+        width: 2305
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6216404a75685d0f0800000000000000
+      internalID: -1092819623595450074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loligoSquid in motion spreadsheet_7
+      rect:
+        serializedVersion: 2
+        x: 6915
+        y: 0
+        width: 2305
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09825cb3f72e642e0800000000000000
+      internalID: -2141775536676591472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
