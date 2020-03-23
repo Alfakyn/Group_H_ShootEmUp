@@ -3300,6 +3300,27 @@ PrefabInstance:
       propertyPath: reload_image
       value: 
       objectReference: {fileID: 1447242840}
+    - target: {fileID: 6016329855890283260, guid: b0361281c3dc3bd4184c8b064a9ca70b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce17a22549984b04593ecf46523f0446,
+        type: 3}
+    - target: {fileID: 6016329855890283260, guid: b0361281c3dc3bd4184c8b064a9ca70b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 40.540264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016329855890283260, guid: b0361281c3dc3bd4184c8b064a9ca70b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 28.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016329855890283260, guid: b0361281c3dc3bd4184c8b064a9ca70b,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6016329855890283261, guid: b0361281c3dc3bd4184c8b064a9ca70b,
         type: 3}
       propertyPath: m_LocalPosition.x
