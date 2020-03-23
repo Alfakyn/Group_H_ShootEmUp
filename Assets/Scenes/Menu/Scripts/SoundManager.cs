@@ -21,7 +21,7 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        testSound = Resources.Load<AudioClip>("SFX/Noice");  //Instantiate every audio file
+        //Instantiate every audio file
         menuMusic1 = Resources.Load<AudioClip>("Music/Menu/01. Triumphal - AShamaluevMusic");
         gameMusic1 = Resources.Load<AudioClip>("Music/Game/Action Sport Rock Trailer - AShamaluevMusic");
         shootingTorpedo = Resources.Load<AudioClip>("SFX/Weapons/Torpedo/Missile_sonic");
