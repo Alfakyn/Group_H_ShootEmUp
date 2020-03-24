@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject optionsMenu;
     public static bool isPausable = true;
+    public SubMarineBehaviour subMarineBehaviour;
 
     void Update()
     {
@@ -38,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        subMarineBehaviour.enabled = false;
         SoundManager.music.Pause();
         Time.timeScale = 0f;
         gameIsPaused = true;
@@ -46,6 +48,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        subMarineBehaviour.enabled = true;
         SoundManager.music.UnPause();
         Time.timeScale = 1f;
         gameIsPaused = false;

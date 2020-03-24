@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -995,6 +995,11 @@ PrefabInstance:
       propertyPath: optionsMenu
       value: 
       objectReference: {fileID: 1573355018}
+    - target: {fileID: 8507030977428794604, guid: 08d32dd438122ba499f2506603dd6001,
+        type: 3}
+      propertyPath: subMarineBehaviour
+      value: 
+      objectReference: {fileID: 1627118295}
     - target: {fileID: 8507030977428794607, guid: 08d32dd438122ba499f2506603dd6001,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2269,6 +2274,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 858363953}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1627118295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6016329855890283011, guid: b0361281c3dc3bd4184c8b064a9ca70b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121752606}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f239985de626b7b48bf06b5c38640e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1646611450 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4967719740838848111, guid: 08d32dd438122ba499f2506603dd6001,
