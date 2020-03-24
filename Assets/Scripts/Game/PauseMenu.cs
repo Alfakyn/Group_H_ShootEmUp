@@ -1,13 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject optionsMenu;
+    GameObject optionsMenuCanvas;
     public static bool isPausable = true;
+    public static bool gameIsPaused = false;
     public SubMarineBehaviour subMarineBehaviour;
+
+    private void Start()
+    {
+        optionsMenuCanvas = GameObject.FindGameObjectWithTag("CanvasOptionsMenu");
+    }
+
 
     void Update()
     {
@@ -17,16 +24,9 @@ public class PauseMenu : MonoBehaviour
             {
                 Resume();
                 //If you press escape when in optionsMenu
-                if (optionsMenu.activeSelf)
+                if (optionsMenuCanvas.gameObject.transform.GetChild(0).gameObject.activeSelf)
                 {
-                    optionsMenu.SetActive(false);
-
-                    //Makes all buttons in pauseMenu active again (for next time when opening the pauseMenu
-                    pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
-                    pauseMenuUI.transform.GetChild(1).gameObject.SetActive(true);
-                    pauseMenuUI.transform.GetChild(2).gameObject.SetActive(true);
-                    pauseMenuUI.transform.GetChild(3).gameObject.SetActive(true);
-                    pauseMenuUI.transform.GetChild(4).gameObject.SetActive(true);
+                    optionsMenuCanvas.gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 }
             }
             else
@@ -38,6 +38,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        gameObject.GetComponent<Image>().enabled = true;
         pauseMenuUI.SetActive(true);
         subMarineBehaviour.enabled = false;
         SoundManager.music.Pause();
@@ -47,6 +48,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        gameObject.GetComponent<Image>().enabled = false;
         pauseMenuUI.SetActive(false);
         subMarineBehaviour.enabled = true;
         SoundManager.music.UnPause();

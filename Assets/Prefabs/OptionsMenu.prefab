@@ -921,6 +921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 4378461662985316402, guid: 96bb89bce103fe84a9bc8b68c3908a9c,
     type: 2}
+  canvasPauseMenu: {fileID: 0}
 --- !u!1 &4507888339453097481
 GameObject:
   m_ObjectHideFlags: 0

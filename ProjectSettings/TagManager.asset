@@ -14,6 +14,10 @@ TagManager:
   - Spike
   - Oxygen
   - Explosion
+  - CanvasOptionsMenu
+  - CanvasPauseMenu
+  - MainMenu
+  - CanvasMainMenu
   layers:
   - Default
   - TransparentFX

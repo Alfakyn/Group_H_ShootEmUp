@@ -2,7 +2,8 @@
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip testSound;  //Do this for every audio file
+    //Do this for every audio file
+    public static AudioClip testSound;
     public static AudioClip menuMusic1;
     public static AudioClip gameMusic1;
     public static AudioClip shootingTorpedo;
@@ -16,7 +17,8 @@ public class SoundManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);    //Makes it so the SoundManager stays alive even after the scene is changed
+        //Makes it so the SoundManager stays alive even after the scene is changed
+        DontDestroyOnLoad(transform.gameObject);    
     }
 
     void Start()
