@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
@@ -9,21 +8,23 @@ public class ScoreManager : MonoBehaviour
 {
     public List<Score> scoreboard = new List<Score>();
     public static Jsonwrapper wrapper;
-    public Text leaderboard;
-    public Text inputText;
+    public Text leaderboard, inputText;
     public Canvas canvas;
     public static ScoreManager scoreManager;
     static int playerScore = 0;
+    public int scoreBoardMax;
 
     void Awake()
-    {
-        scoreManager = this;    //instantiates a static scoreManager so that non static variables can be accessed
-        DontDestroyOnLoad(transform.gameObject);    //Makes it so the ScoreManager stays alive even after the scene is changed
+    {   
+        //instantiates a static scoreManager so that non static variables can be accessed
+        scoreManager = this;
+        //Makes it so the ScoreManager stays alive even after the scene is changed
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     void Start()
     {
-        LoadScoreBoard();
+        //LoadScoreBoard();
     }
 
     public void StoreScore(int score)
@@ -88,24 +89,19 @@ public class ScoreManager : MonoBehaviour
         //load all data from "path"
         if (File.Exists(Path()))
         {
-            scoreboard.Clear();
-            string data = File.ReadAllText(Path());
-            wrapper = JsonUtility.FromJson<Jsonwrapper>(data);
 
+            //Do this only if LoadWrapper == null
+            if (wrapper == null)
+            {
+                Debug.Log("New scoreboard wrapper was created");
+                wrapper = new Jsonwrapper();
+            }
             if (wrapper != null)
             {
-                int scoreboardLenght = wrapper.scoreboard.Count;
-                for (int i = 0; i < scoreboardLenght; i++)
-                {
-                    scoreboard.Add(wrapper.scoreboard[i]);
-                    Debug.Log("Score loaded: " + scoreboard[i].name + " has " + scoreboard[i].score + " points.");
-                }
+                string data = File.ReadAllText(Path());
+                wrapper.scoreboard.Clear();
+                wrapper = JsonUtility.FromJson<Jsonwrapper>(data);
                 SortScoreboard();
-            }
-            else //Do this only if LoadWrapper == null
-            {
-                Debug.Log("No scores found. New scoreboard wrapper was created");
-                wrapper = new Jsonwrapper();
             }
         }
         else
@@ -116,22 +112,28 @@ public class ScoreManager : MonoBehaviour
 
     public void SortScoreboard()
     {
-        scoreboard.Sort((a, b) => b.score.CompareTo(a.score));
-        //if (scoreboard.Count > 3)
-        //{
-        //    scoreboard.RemoveAt(4);
-        //}
+        //Sorts scores in order: Most points first
+        wrapper.scoreboard.Sort((a, b) => b.score.CompareTo(a.score));
+
+        //Deletes extra scores if there are too many saved scores in the scoreboard
+        while (wrapper.scoreboard.Count > scoreBoardMax)
+        {
+            wrapper.scoreboard.RemoveAt(wrapper.scoreboard.Count - 1);
+            Debug.Log("Score deleted. ScoreBoard only shows top " + scoreBoardMax);
+        }
+        string sortedScoreboard = JsonUtility.ToJson(wrapper, true);
+        //Saves data to json-file
+        File.WriteAllText(Path(), sortedScoreboard);
         Debug.Log("Scoreboard Sorted");
     }
 
     public void DisplayScoreboard()
     {
         leaderboard.text = "Leaderboard: \n\n";
-        for (int i = 0; i < scoreboard.Count; i++)
+        //Cap so that scores will stop being added to leaderboard.text after the 10th score
+        for (int i = 0; i < wrapper.scoreboard.Count; i++)
         {
-            //Add cap so that it will stop adding scores to text.text after the 10th score
-
-            leaderboard.text += i + 1 + ". " + scoreboard[i].name + ":\t" + scoreboard[i].score + "\n";
+            leaderboard.text += i + 1 + ". " + wrapper.scoreboard[i].name + ":\t" + wrapper.scoreboard[i].score + "\n";
         }
     }
 }
