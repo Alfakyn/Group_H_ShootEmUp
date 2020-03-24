@@ -68,6 +68,7 @@ public class PauseMenu : MonoBehaviour
     {
         Resume();
         SoundManager.music.Stop();
+        Destroy(ScoreManager.scoreManager.transform.gameObject);
         SceneManager.LoadScene(0);
     }
     public void playButtonSound()

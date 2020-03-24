@@ -46,6 +46,7 @@ public class ScoreManager : MonoBehaviour
         Time.timeScale = 1f;
         PauseMenu.isPausable = true;
         SceneManager.LoadScene(0);
+        Destroy(transform.gameObject);
     }
 
 
