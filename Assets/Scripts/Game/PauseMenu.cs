@@ -65,6 +65,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel()
     {
         Resume();
+        ScoreManager.scoreManager.playerScore = 0;
         SoundManager.music.Stop();
         SceneManager.LoadScene(1);
     }

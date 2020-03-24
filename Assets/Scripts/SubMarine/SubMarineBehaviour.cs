@@ -102,7 +102,7 @@ public class SubMarineBehaviour : MonoBehaviour
             current_air = 0.0f;
             Debug.Log("Player has died");
             SoundManager.music.Stop();
-            ScoreManager.scoreManager.StoreScore(69);
+            ScoreManager.scoreManager.StoreScore();
         }
     }
 

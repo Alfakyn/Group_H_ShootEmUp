@@ -35,6 +35,7 @@ public class Swordfish2Behaviour : MonoBehaviour
                 Instantiate(held_Powerup, transform.position, transform.rotation);
             }
             Destroy(gameObject);
+            ScoreManager.scoreManager.AddScore(10);
             SoundManager.playSFX(SoundManager.testSound); // ( ͡° ͜ʖ ͡°) N I C E ( ͡° ͜ʖ ͡°)
         }
         else

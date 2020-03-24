@@ -54,6 +54,7 @@ public class SquidBehaviour : MonoBehaviour
                 Instantiate(held_Powerup, transform.position, transform.rotation);
             }
             Destroy(gameObject);
+            ScoreManager.scoreManager.AddScore(20);
             SoundManager.playSFX(SoundManager.testSound);
         }
         if (ink_reload_timer > 0)

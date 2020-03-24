@@ -42,6 +42,7 @@ public class Swordfish1Behaviour : MonoBehaviour
         if (health_points <= 0)
         {
             Destroy(gameObject);
+            ScoreManager.scoreManager.AddScore(10);
             SoundManager.playSFX(SoundManager.testSound); // ( ͡° ͜ʖ ͡°) N I C E ( ͡° ͜ʖ ͡°)
         }
         else

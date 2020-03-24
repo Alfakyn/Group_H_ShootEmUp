@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
     public Text leaderboard, inputText;
     public Canvas canvas;
     public static ScoreManager scoreManager;
-    static int playerScore = 0;
+    public float playerScore = 0f;
     public int scoreBoardMax;
 
     void Awake()
@@ -22,28 +22,37 @@ public class ScoreManager : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
-    void Start()
+    private void Update()
     {
-        //LoadScoreBoard();
+        //If it is Level scene
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            //Then start counting points
+            playerScore += (1 * Time.deltaTime);
+            Debug.Log("PlayerScore is: " + playerScore);
+        }
     }
 
-    public void StoreScore(int score)
+    public void AddScore(int score)
     {
-        playerScore = score;
-        Debug.Log("Score: " + playerScore);
+        playerScore += score;
+        Debug.Log("PlayerScore = " + playerScore);
+    }
+
+    public void StoreScore()
+    {
+        Debug.Log("SaveScore: " + playerScore);
         PauseMenu.isPausable = false;
         scoreManager.InputPlayerName();
     }
 
     public void SaveScore()
     {
-        Debug.Log("SaveScore");
-        SoundManager.playSFX(SoundManager.buttonClick);
         Score score = new Score();
-
         score.name = scoreManager.inputText.text;
-        score.score = playerScore;
+        score.score = (int)playerScore;
         SaveToScoreboard(score);
+
         Time.timeScale = 1f;
         PauseMenu.isPausable = true;
         SceneManager.LoadScene(0);
@@ -66,14 +75,7 @@ public class ScoreManager : MonoBehaviour
 
     public void SaveToScoreboard(Score score)
     {
-        //Creates a new file. Might want to change it to look for an already existing file if the file already exists
-        //And if the file does exist, load the data from it
-
-        // serializes (converts) Score "data" to json format
-        if (wrapper == null)
-        {
-            wrapper = new Jsonwrapper();
-        }
+        LoadScoreBoard();
         wrapper.scoreboard.Add(score);
         string playerScoreData = JsonUtility.ToJson(wrapper, true);
 
@@ -89,7 +91,6 @@ public class ScoreManager : MonoBehaviour
         //load all data from "path"
         if (File.Exists(Path()))
         {
-
             //Do this only if LoadWrapper == null
             if (wrapper == null)
             {
