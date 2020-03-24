@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Swordfish_1
+  m_Name: Swordfish_1_anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,7 +22,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 4337947202167728383, guid: e023e42c538cfb84ebcd0388b88a0ca6,
         type: 3}
-    - time: 0.16666667
+    - time: 0.15
       value: {fileID: -2449001833384581808, guid: e023e42c538cfb84ebcd0388b88a0ca6,
         type: 3}
     - time: 0.33333334
@@ -72,7 +72,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 3856959464804164633, guid: 71d3cbb147ca2c744b8360b019aeea80,
         type: 3}
-    - time: 0.16666667
+    - time: 0.15
       value: {fileID: 3415052235374795997, guid: 71d3cbb147ca2c744b8360b019aeea80,
         type: 3}
     - time: 0.33333334

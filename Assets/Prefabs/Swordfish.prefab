@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 400986836209971807}
   - component: {fileID: 1073788716609106564}
   - component: {fileID: 3230866670876413056}
-  - component: {fileID: 6766587965910822883}
   - component: {fileID: 2026932058567116794}
+  - component: {fileID: 3195121063283133591}
   m_Layer: 0
   m_Name: Swordfish
   m_TagString: Enemy
@@ -175,25 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bde6650a4bea1240a0197d0b76fce1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &6766587965910822883
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2663574125054305729}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2026932058567116794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,3 +217,22 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &3195121063283133591
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663574125054305729}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffd371d7c0be1a24bb5bbca2969b0e3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
