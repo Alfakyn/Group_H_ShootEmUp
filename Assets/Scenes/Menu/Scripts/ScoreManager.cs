@@ -15,6 +15,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager scoreManager;
     public float playerScore = 0f;
     public int scoreBoardMax;
+    private int maxCharName = 10;
 
     public static bool chat_is_done;
     void Awake()
@@ -62,6 +63,10 @@ public class ScoreManager : MonoBehaviour
     {
         Score score = new Score();
         score.name = scoreManager.inputText.text;
+        if (score.name.Length > maxCharName)
+        {
+            score.name = score.name.Substring(0, maxCharName);
+        }
         score.score = (int)playerScore;
         SaveToScoreboard(score);
 
@@ -103,7 +108,7 @@ public class ScoreManager : MonoBehaviour
         {
             Debug.Log("Unable to read data. File not found in " + Path() + "\nNew file created");
             File.Create(Path());
-            //If the .json-file is empty, then add a new wrapper to it
+            //If the wrapper is unasigned, then add a new wrapper to it
             if (wrapper == null)
             {
                 Debug.Log("New scoreboard wrapper was created");
@@ -113,19 +118,22 @@ public class ScoreManager : MonoBehaviour
         //If it does exist, load all data from "path"
         else
         {
-            //If the .json-file is empty, then add a new wrapper to it
+            //If the wrapper is unasigned, then add a new wrapper to it
+            //if (wrapper == null)
+            //{
+            //    Debug.Log("New scoreboard wrapper was created");
+            //    wrapper = new Jsonwrapper();
+            //}
+            string data = File.ReadAllText(Path());
+            wrapper = JsonUtility.FromJson<Jsonwrapper>(data);
+            if (wrapper.scoreboard.Count != 0)
+            {
+                SortScoreboard();
+            }
             if (wrapper == null)
             {
-                Debug.Log("New scoreboard wrapper was created");
+                Debug.Log("this text should never be seen");
                 wrapper = new Jsonwrapper();
-                Debug.Log(wrapper.scoreboard.Count);
-            }
-            if (wrapper != null && wrapper.scoreboard.Count != 0)
-            {
-                string data = File.ReadAllText(Path());
-                wrapper.scoreboard.Clear();
-                wrapper = JsonUtility.FromJson<Jsonwrapper>(data);
-                SortScoreboard();
             }
         }
     }
