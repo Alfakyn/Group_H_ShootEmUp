@@ -22,7 +22,6 @@ public class PauseMenu : MonoBehaviour
         {
             if (gameIsPaused)
             {
-                Cursor.visible = false;
                 Resume();
                 //If you press escape when in optionsMenu
                 if (optionsMenuCanvas.gameObject.transform.GetChild(0).gameObject.activeSelf)
@@ -50,6 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        Cursor.visible = false;
         gameObject.GetComponent<Image>().enabled = false;
         pauseMenuUI.SetActive(false);
         subMarineBehaviour.enabled = true;
