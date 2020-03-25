@@ -23,6 +23,7 @@ public class SubMarineBehaviour : MonoBehaviour
     private bool invincibility_cheat_on;
 
     public GameObject tutorialtext;
+    public GameObject invincibility_bubble;
 
 
 
@@ -118,13 +119,24 @@ public class SubMarineBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             Vector2 cheatpos = rigidbody2d.position;
-            cheatpos.x = camera_half_width - 20;
+            cheatpos.x = camera_half_width - 2;
 
             if (rigidbody2d.position.x >= cheatpos.x)
             {
-                invincibility_cheat_on = true;
-                air_countdown_rate = 0;
-                Debug.Log("Cheat on");
+                if (invincibility_cheat_on == false)
+                {
+                    invincibility_bubble.SetActive(true);
+                    invincibility_cheat_on = true;
+                    air_countdown_rate = 0;
+                    Debug.Log("Cheat on");
+                }
+                else if(invincibility_cheat_on == true)
+                {
+                    invincibility_bubble.SetActive(false);
+                    invincibility_cheat_on = false;
+                    air_countdown_rate = 0.1f;
+                    Debug.Log("Cheat off");
+                }
             }
         }
     }
