@@ -54,6 +54,7 @@ public class ScoreManager : MonoBehaviour
     {
         Debug.Log("SaveScore: " + playerScore);
         PauseMenu.isPausable = false;
+        scoreManager.LoadScoreBoard();
         scoreManager.InputPlayerName();
     }
 
@@ -97,16 +98,29 @@ public class ScoreManager : MonoBehaviour
 
     public void LoadScoreBoard()
     {
-        //load all data from "path"
-        if (File.Exists(Path()))
+        //Create .jsonfil if it does not exist in "path"
+        if (!File.Exists(Path()))
         {
-            //Do this only if LoadWrapper == null
+            Debug.Log("Unable to read data. File not found in " + Path() + "\nNew file created");
+            File.Create(Path());
+            //If the .json-file is empty, then add a new wrapper to it
             if (wrapper == null)
             {
                 Debug.Log("New scoreboard wrapper was created");
                 wrapper = new Jsonwrapper();
             }
-            if (wrapper != null)
+        }
+        //If it does exist, load all data from "path"
+        else
+        {
+            //If the .json-file is empty, then add a new wrapper to it
+            if (wrapper == null)
+            {
+                Debug.Log("New scoreboard wrapper was created");
+                wrapper = new Jsonwrapper();
+                Debug.Log(wrapper.scoreboard.Count);
+            }
+            if (wrapper != null && wrapper.scoreboard.Count != 0)
             {
                 string data = File.ReadAllText(Path());
                 wrapper.scoreboard.Clear();
@@ -114,11 +128,8 @@ public class ScoreManager : MonoBehaviour
                 SortScoreboard();
             }
         }
-        else
-        {
-            Debug.Log("Unable to read data. File not found in " + Path());
-        }
     }
+
 
     public void SortScoreboard()
     {
@@ -139,8 +150,8 @@ public class ScoreManager : MonoBehaviour
 
     public void DisplayScoreboard()
     {
-        leaderboard.text = "Leaderboard: \n\n";
-        //Cap so that scores will stop being added to leaderboard.text after the 10th score
+        leaderboard.text = "High Score: \n\n";
+        //Cap so that scores will stop being added to leaderboard.text after the #scoreBoardMax score
         for (int i = 0; i < wrapper.scoreboard.Count; i++)
         {
             leaderboard.text += i + 1 + ". " + wrapper.scoreboard[i].name + ":\t" + wrapper.scoreboard[i].score + "\n";
