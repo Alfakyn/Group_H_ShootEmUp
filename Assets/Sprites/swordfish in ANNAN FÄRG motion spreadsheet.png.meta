@@ -1,0 +1,337 @@
+fileFormatVersion: 2
+guid: cb2a40642a81dbc4797aaf34861ad403
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5898073703434754182
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_0"
+  - first:
+      213: -4579329967820917545
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_1"
+  - first:
+      213: 6805640671171499670
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_2"
+  - first:
+      213: 7637072990460535519
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_3"
+  - first:
+      213: -5742249679628574586
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_4"
+  - first:
+      213: 3350451052095617099
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_5"
+  - first:
+      213: 3917839680313694117
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_6"
+  - first:
+      213: 1791396513731789481
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_7"
+  - first:
+      213: 8560664308575925376
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_8"
+  - first:
+      213: 3106373149653167390
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_9"
+  - first:
+      213: 7070926927158699256
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_10"
+  - first:
+      213: -2835720270418068448
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_11"
+  - first:
+      213: 8084091570535743677
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_12"
+  - first:
+      213: -8541680699623785674
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_13"
+  - first:
+      213: -8509121284641367856
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_14"
+  - first:
+      213: -7117922912763417268
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_15"
+  - first:
+      213: 5418150013368991161
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_16"
+  - first:
+      213: 3545345268026885780
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_17"
+  - first:
+      213: 8385160507292726080
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_18"
+  - first:
+      213: 2966370719314854008
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_19"
+  - first:
+      213: 453632874956551727
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_20"
+  - first:
+      213: -617464588000140894
+    second: "swordfish in ANNAN F\xC4RG motion spreadsheet_21"
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "swordfish in ANNAN F\xC4RG motion spreadsheet_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1970
+        width: 3312
+        height: 1068
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6881d40b8ca2ad150800000000000000
+      internalID: 5898073703434754182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "swordfish in ANNAN F\xC4RG motion spreadsheet_1"
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 1970
+        width: 3191
+        height: 1068
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4bbb618a3f270c0800000000000000
+      internalID: -4579329967820917545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "swordfish in ANNAN F\xC4RG motion spreadsheet_2"
+      rect:
+        serializedVersion: 2
+        x: 6724
+        y: 1975
+        width: 2800
+        height: 1063
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696d022f12e727e50800000000000000
+      internalID: 6805640671171499670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "swordfish in ANNAN F\xC4RG motion spreadsheet_3"
+      rect:
+        serializedVersion: 2
+        x: 10059
+        y: 1970
+        width: 2818
+        height: 1068
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd261200c655cf960800000000000000
+      internalID: 7637072990460535519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "swordfish in ANNAN F\xC4RG motion spreadsheet_11"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 299
+        width: 3116
+        height: 1068
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c3b57307f75a8d0800000000000000
+      internalID: -2835720270418068448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "swordfish in ANNAN F\xC4RG motion spreadsheet_12"
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 299
+        width: 3191
+        height: 1068
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db04389b376703070800000000000000
+      internalID: 8084091570535743677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "swordfish in ANNAN F\xC4RG motion spreadsheet_13"
+      rect:
+        serializedVersion: 2
+        x: 6724
+        y: 304
+        width: 2785
+        height: 1063
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b3d12d8aad57980800000000000000
+      internalID: -8541680699623785674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "swordfish in ANNAN F\xC4RG motion spreadsheet_14"
+      rect:
+        serializedVersion: 2
+        x: 10059
+        y: 299
+        width: 2812
+        height: 1068
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d85c3e564789e980800000000000000
+      internalID: -8509121284641367856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

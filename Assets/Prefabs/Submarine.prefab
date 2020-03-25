@@ -5000,15 +5000,15 @@ SpriteRenderer:
   m_SortingLayerID: 2028776505
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 597e7e87700f37b46a045f0e313a62ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f4cdbd7bcc32fa49bd89bd51d61bba0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.04, y: 0.04}
+  m_Size: {x: 40.540264, y: 28.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6016329855890283011
@@ -5025,6 +5025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 6016329854936324613}
   flashlight: {fileID: 6016329854746069649}
+  crosshair: {fileID: 0}
   ink_timer: 0
   reload_image: {fileID: 0}
   torpedo: {fileID: 1568222054061191295, guid: 4a8a66f27f31a104bb731a2bd4039585, type: 3}
@@ -5033,6 +5034,9 @@ MonoBehaviour:
   bullet: {fileID: 5362876842790477443, guid: 2bc2b696f5ec2f6469a6da5268d4af51, type: 3}
   bullet_reload_interval: 0.1
   bullet_reload_timer: 0
+  hull_integrity_representation: []
+  damaged_hull: {fileID: 0}
+  undamaged_hull: {fileID: 0}
   air_meter_bar: {fileID: 0}
   current_air: 1000
   oxygen_volume: 200
