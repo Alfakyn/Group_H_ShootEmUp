@@ -15,7 +15,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager scoreManager;
     public float playerScore = 0f;
     public int scoreBoardMax;
-    private int maxCharName = 10;
+    private int maxCharName = 20;
 
     public static bool chat_is_done;
     void Awake()
