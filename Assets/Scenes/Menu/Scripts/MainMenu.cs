@@ -56,4 +56,15 @@ public class MainMenu : MonoBehaviour
     {
         SoundManager.playSFX(SoundManager.buttonClick);
     }
+
+    public void playCreditsMusic()
+    {
+        SoundManager.music.Pause();
+        SoundManager.playMusic(SoundManager.creditsMusic);
+    }
+
+    public void playMainMenuMusic()
+    {
+        SoundManager.playMusic(SoundManager.menuMusic1);
+    }
 }

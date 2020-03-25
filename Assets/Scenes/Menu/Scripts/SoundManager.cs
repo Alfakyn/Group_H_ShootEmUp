@@ -10,6 +10,10 @@ public class SoundManager : MonoBehaviour
     public static AudioClip shootingBullet;
     public static AudioClip hitTorpedo;
     public static AudioClip buttonClick;
+    public static AudioClip pufferFishDeath;
+    public static AudioClip creditsMusic;
+    public static AudioClip inkSplatter;
+    public static AudioClip enemyHit;
 
     public static AudioSource[] audioSources;
     public static AudioSource sfx;
@@ -30,6 +34,10 @@ public class SoundManager : MonoBehaviour
         shootingBullet = Resources.Load<AudioClip>("SFX/Weapons/Bullet/secondary_scuba");
         hitTorpedo = Resources.Load<AudioClip>("SFX/Weapons/Torpedo/missile_explosion");
         buttonClick = Resources.Load<AudioClip>("SFX/Implemented resources 18th/Menu Selection Hover 2");
+        pufferFishDeath = Resources.Load<AudioClip>("SFX/Enemies/Puffer/puffer_death_1");
+        creditsMusic = Resources.Load<AudioClip>("SFX/Implemented resources 18th/Credits");
+        inkSplatter = Resources.Load<AudioClip>("SFX/Implemented resources 18th/Ink Splatter");
+        enemyHit = Resources.Load<AudioClip>("SFX/Implemented resources 18th/Enemy hit");
 
         audioSources = GetComponents<AudioSource>();
         sfx = audioSources[0];
