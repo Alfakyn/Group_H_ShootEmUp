@@ -22,6 +22,9 @@ public class SubMarineBehaviour : MonoBehaviour
     private float invincibility_timer;
     private bool invincibility_cheat_on;
 
+    public GameObject tutorialtext;
+
+
 
     bool submarine_covered_in_ink;
     const float INK_FALLOFF_TIME = 30;
@@ -73,6 +76,8 @@ public class SubMarineBehaviour : MonoBehaviour
         chat_is_done = false;
         ScoreManager.chat_is_done = false;
         WaveSpawner.chat_is_done = false;
+
+        tutorialtext.SetActive(true);
 
         air_meter_bar.maxValue = current_air;
         air_meter_bar.value = current_air;
@@ -149,6 +154,8 @@ public class SubMarineBehaviour : MonoBehaviour
             chat_is_done = true;
             ScoreManager.chat_is_done = true;
             WaveSpawner.chat_is_done = true;
+            tutorialtext.SetActive(false);
+           
         }
     }
     void moveCrosshair()

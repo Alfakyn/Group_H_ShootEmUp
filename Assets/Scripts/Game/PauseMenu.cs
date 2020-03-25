@@ -74,10 +74,11 @@ public class PauseMenu : MonoBehaviour
 
     public void SceneSwitch()
     {
-        Cursor.visible = true;
+        
         Resume();
         SoundManager.music.Stop();
         Destroy(ScoreManager.scoreManager.transform.gameObject);
+        Cursor.visible = true;
         SceneManager.LoadScene(0);
     }
     public void playButtonSound()
