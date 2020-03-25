@@ -126,14 +126,14 @@ public class ScoreManager : MonoBehaviour
             //}
             string data = File.ReadAllText(Path());
             wrapper = JsonUtility.FromJson<Jsonwrapper>(data);
+
+            if (wrapper == null)
+            {
+                wrapper = new Jsonwrapper();
+            }
             if (wrapper.scoreboard.Count != 0)
             {
                 SortScoreboard();
-            }
-            if (wrapper == null)
-            {
-                Debug.Log("this text should never be seen");
-                wrapper = new Jsonwrapper();
             }
         }
     }
