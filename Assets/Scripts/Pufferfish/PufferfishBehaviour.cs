@@ -5,6 +5,7 @@ using UnityEngine;
 public class PufferfishBehaviour : MonoBehaviour
 {
     public Rigidbody2D rigidbody2d;
+    public new CapsuleCollider2D collider;
 
     const float HORIZONTAL_SPEED = 2.0f;
 
@@ -23,6 +24,8 @@ public class PufferfishBehaviour : MonoBehaviour
 
     public GameObject held_Powerup;
     public float drop_chance_percent;
+
+    public Animator Animator;
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +84,15 @@ public class PufferfishBehaviour : MonoBehaviour
         }
       
     }
+    void pufferfishBulletDeath()
+    {
+        if (Random.Range(0.0f, 100.0f) < drop_chance_percent)
+        {
+            Instantiate(held_Powerup, transform.position, transform.rotation);
+        }
+        Shootspikes();
+        Destroy(gameObject);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Torpedo")
@@ -100,16 +112,13 @@ public class PufferfishBehaviour : MonoBehaviour
         }
         if (collision.tag == "Bullet")
         {
-            if (Random.Range(0.0f, 100.0f) < drop_chance_percent)
-            {
-                Instantiate(held_Powerup, transform.position, transform.rotation);
-            }
-            Shootspikes();
+            Animator.SetBool("is_hit", true);
             //SoundManager.playSound(SoundManager.hitBullet); //If bullet leaves screen triggers sound
             Destroy(collision.gameObject);
             ScoreManager.scoreManager.AddScore(15);
-            Destroy(gameObject);
             SoundManager.playSFX(SoundManager.pufferFishDeath);
+            collider.enabled = false;
+            
             
         }
         if (collision.tag == "Player")

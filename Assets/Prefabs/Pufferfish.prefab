@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7760697738587189045}
   - component: {fileID: 3508059465236482267}
   - component: {fileID: 221694885484987651}
+  - component: {fileID: 4677053188548721611}
   m_Layer: 0
   m_Name: Pufferfish
   m_TagString: Enemy
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 26.109999, y: 18.741064}
+  m_Size: {x: 24.32, y: 12.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -138,11 +139,11 @@ MonoBehaviour:
   m_LightType: 2
   m_BlendStyleIndex: 1
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Color: {r: 0.27058825, g: 0.9843137, b: 0.3647059, a: 1}
+  m_Intensity: 1.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: d8bc83d584646cb47aaab3c069a1972f,
+  m_LightCookieSprite: {fileID: 663023517465559343, guid: 76b969a140b605441a2b226e6a147b6f,
     type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -178,11 +179,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 1306258033285633118}
+  collider: {fileID: 433299375516639883}
   stamina_recharge_counter: 0
   spike: {fileID: 6162274126611906355, guid: fbe80dd23ae960941a9ccfbc2ae49a0e, type: 3}
   held_Powerup: {fileID: 4972031609815322284, guid: d7451733e8ce9dd4f89df868fcff8dd0,
     type: 3}
   drop_chance_percent: 10
+  Animator: {fileID: 4677053188548721611}
 --- !u!114 &221694885484987651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,3 +198,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bde6650a4bea1240a0197d0b76fce1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4677053188548721611
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343372569637258338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1733b25a757d6a348a63422aeaba756e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
