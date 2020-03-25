@@ -3,33 +3,41 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public List<Score> scoreboard = new List<Score>();
     public static Jsonwrapper wrapper;
     public Text leaderboard, inputText;
+    GameObject currentScore;
     public Canvas canvas;
     public static ScoreManager scoreManager;
     public float playerScore = 0f;
     public int scoreBoardMax;
 
     void Awake()
-    {   
+    {
         //instantiates a static scoreManager so that non static variables can be accessed
         scoreManager = this;
         //Makes it so the ScoreManager stays alive even after the scene is changed
         DontDestroyOnLoad(transform.gameObject);
     }
 
+
     private void Update()
     {
         //If it is Level scene
-        if(SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
+            //Assign currentScore to TextMesh.text
+            if (currentScore == null)
+            {
+                currentScore = GameObject.FindGameObjectWithTag("CanvasPauseMenu").transform.GetChild(3).gameObject;
+            }
             //Then start counting points
             playerScore += (1 * Time.deltaTime);
-            Debug.Log("PlayerScore is: " + playerScore);
+            currentScore.GetComponent<TextMeshProUGUI>().text = ("Score: " + (int)playerScore);
         }
     }
 
@@ -59,13 +67,11 @@ public class ScoreManager : MonoBehaviour
         Destroy(transform.gameObject);
     }
 
-
     public void InputPlayerName()
     {
         scoreManager.canvas.gameObject.SetActive(true);
         Time.timeScale = 0f;
     }
-
 
     static string Path()
     {

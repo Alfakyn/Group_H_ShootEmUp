@@ -86,11 +86,13 @@ public class PufferfishBehaviour : MonoBehaviour
         if (collision.tag == "Torpedo")
         {
             Destroy(collision.gameObject);
+            ScoreManager.scoreManager.AddScore(15);
             Destroy(gameObject);
             SoundManager.playSFX(SoundManager.hitTorpedo);
         }
         if(collision.tag == "Explosion")
         {
+            ScoreManager.scoreManager.AddScore(15);
             Destroy(gameObject);
         }
         if (collision.tag == "Bullet")
@@ -102,10 +104,12 @@ public class PufferfishBehaviour : MonoBehaviour
             Shootspikes();
             //SoundManager.playSound(SoundManager.hitBullet); //If bullet leaves screen triggers sound
             Destroy(collision.gameObject);
+            ScoreManager.scoreManager.AddScore(15);
             Destroy(gameObject);
         }
         if (collision.tag == "Player")
         {
+            ScoreManager.scoreManager.AddScore(15);
             Shootspikes();
             Destroy(gameObject);
         }

@@ -2740,7 +2740,8 @@ MonoBehaviour:
   leaderboard: {fileID: 2079595320}
   inputText: {fileID: 2042631616}
   canvas: {fileID: 1586048692}
-  scoreBoardMax: 3
+  playerScore: 0
+  scoreBoardMax: 10
 --- !u!4 &1418736780
 Transform:
   m_ObjectHideFlags: 0
