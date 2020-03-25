@@ -51,15 +51,20 @@ public class SoundManager : MonoBehaviour
 
     public static void playSFX(AudioClip sound)
     {
-        //if (sound.name == "puffer_death_1")
-        //{
-        //    sfx.volume = 0.4f;
-        //}
-        //else
-        //{
-        //    sfx.volume = 1.0f;
-        //}
-        sfx.PlayOneShot(sound);
+        sfx.clip = sound;
+        if (sound == null)
+        {
+            return;
+        }
+        if (sound.name == "puffer_death_1")
+        {
+            sfx.volume = 0.4f;
+        }
+        else
+        {
+            sfx.volume = 1.0f;
+        }
+        sfx.PlayOneShot(sound, sfx.volume);
     }
     public static void playMusic(AudioClip sound)
     {
