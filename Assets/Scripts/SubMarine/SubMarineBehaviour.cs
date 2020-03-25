@@ -11,6 +11,8 @@ public class SubMarineBehaviour : MonoBehaviour
     public Rigidbody2D rigidbody2d;
     public UnityEngine.Experimental.Rendering.Universal.Light2D flashlight;
     float camera_half_height, camera_half_width;
+    private Vector3 crosshair_target;
+    public GameObject crosshair;
 
     Camera main_camera;
 
@@ -31,6 +33,12 @@ public class SubMarineBehaviour : MonoBehaviour
     public float bullet_reload_interval;
     public float bullet_reload_timer = 0;
 
+
+    private int damage;
+    private const int MAX_DAMAGE = 5;
+    public Image[] hull_integrity_representation;
+    public Sprite damaged_hull;
+    public Sprite undamaged_hull;
     public Slider air_meter_bar;
     public float current_air;
     private float air_countdown_rate;
@@ -42,6 +50,8 @@ public class SubMarineBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        damage = 0;
+        Cursor.visible = false;
         main_camera = Camera.main;
         camera_half_height = main_camera.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
         camera_half_width = camera_half_height * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
@@ -59,6 +69,7 @@ public class SubMarineBehaviour : MonoBehaviour
     void Update()
     {
         shootTorpedo();
+        moveCrosshair();
     }
 
     private void FixedUpdate()
@@ -68,6 +79,11 @@ public class SubMarineBehaviour : MonoBehaviour
         checkInk();
         checkAir();
         moveSubmarine();
+    }
+    void moveCrosshair()
+    {
+        crosshair_target = main_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
+        crosshair.transform.position = new Vector2(crosshair_target.x, crosshair_target.y);
     }
     void checkInk()
     {
@@ -87,6 +103,18 @@ public class SubMarineBehaviour : MonoBehaviour
 
     void checkAir()
     {
+        for (int i = 0; i < hull_integrity_representation.Length; i++)
+        { 
+           if (i < damage)      
+           {      
+                hull_integrity_representation[i].sprite = damaged_hull;     
+           }      
+           else
+           {      
+              hull_integrity_representation[i].sprite = undamaged_hull;      
+           }            
+        }    
+            
         if (current_air > 0)
         {
             current_air -= air_countdown_rate;
@@ -165,7 +193,15 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         if (collision.tag == "Enemy" || collision.tag == "Spike")
         {
-            air_countdown_rate = air_countdown_rate * 1.5f;
+            if (damage < MAX_DAMAGE)
+            {
+                damage++;
+                air_countdown_rate = air_countdown_rate * 1.5f;
+            }
+            else
+            {
+                current_air -= 50;
+            }
             sprite_renderer.color = new Color(1, 0, 0);
             color_timer = 0.0f;
         }
