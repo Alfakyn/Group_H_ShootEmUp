@@ -44,7 +44,7 @@ public class OptionsMenu : MonoBehaviour
             return;
         }
         //Sets MainMenu to active
-        mainMenu.transform.GetChild(0).gameObject.SetActive(true);
+        mainMenu.transform.GetChild(1).gameObject.SetActive(true);
 
         //Sets OptionsMenu to inactive
         DeactivateOptionsMenu();

@@ -1669,6 +1669,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1657699942225299272, guid: 8a4e050045fa2294498fb0eee88ea264,
+        type: 3}
+      propertyPath: m_text
+      value: "Taninwat Kaewpankan:\nChristoffer El Idrissi:\nGuillem Blanch Riambau:\t\nSimon
+        Zeidan Mellqvist:\nTim J\xF6nsson:\nEmily Wilund:\nFrida Hagelstam:\n\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 1657699942245642880, guid: 8a4e050045fa2294498fb0eee88ea264,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1708,6 +1714,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657699942245642882, guid: 8a4e050045fa2294498fb0eee88ea264,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657699942245642882, guid: 8a4e050045fa2294498fb0eee88ea264,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.27058825
       objectReference: {fileID: 0}
     - target: {fileID: 1657699942245642883, guid: 8a4e050045fa2294498fb0eee88ea264,
         type: 3}
