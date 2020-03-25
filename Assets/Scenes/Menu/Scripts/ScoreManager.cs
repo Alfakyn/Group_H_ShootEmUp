@@ -44,7 +44,6 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int score)
     {
         playerScore += score;
-        Debug.Log("PlayerScore = " + playerScore);
     }
 
     public void StoreScore()

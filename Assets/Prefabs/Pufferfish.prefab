@@ -180,9 +180,9 @@ MonoBehaviour:
   rigidbody2d: {fileID: 1306258033285633118}
   stamina_recharge_counter: 0
   spike: {fileID: 6162274126611906355, guid: fbe80dd23ae960941a9ccfbc2ae49a0e, type: 3}
-  held_Powerup: {fileID: 3213117223097795943, guid: 77ccb4a614d4b2e4484e50b8f0547edb,
+  held_Powerup: {fileID: 4972031609815322284, guid: d7451733e8ce9dd4f89df868fcff8dd0,
     type: 3}
-  drop_chance_percent: 5
+  drop_chance_percent: 10
 --- !u!114 &221694885484987651
 MonoBehaviour:
   m_ObjectHideFlags: 0

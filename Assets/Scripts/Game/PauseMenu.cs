@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
         {
             if (gameIsPaused)
             {
+                Cursor.visible = false;
                 Resume();
                 //If you press escape when in optionsMenu
                 if (optionsMenuCanvas.gameObject.transform.GetChild(0).gameObject.activeSelf)
@@ -31,6 +32,7 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
+                Cursor.visible = true;
                 Pause();
             }
         }
@@ -72,6 +74,7 @@ public class PauseMenu : MonoBehaviour
 
     public void SceneSwitch()
     {
+        Cursor.visible = true;
         Resume();
         SoundManager.music.Stop();
         Destroy(ScoreManager.scoreManager.transform.gameObject);

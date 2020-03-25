@@ -18,6 +18,7 @@ TagManager:
   - CanvasPauseMenu
   - MainMenu
   - CanvasMainMenu
+  - Repair
   layers:
   - Default
   - TransparentFX

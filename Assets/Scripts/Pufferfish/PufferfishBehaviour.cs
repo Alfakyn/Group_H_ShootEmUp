@@ -94,8 +94,9 @@ public class PufferfishBehaviour : MonoBehaviour
         if(collision.tag == "Explosion")
         {
             ScoreManager.scoreManager.AddScore(15);
-            SoundManager.playSFX(SoundManager.pufferFishDeath);
             Destroy(gameObject);
+            SoundManager.playSFX(SoundManager.pufferFishDeath);
+            
         }
         if (collision.tag == "Bullet")
         {
@@ -107,8 +108,9 @@ public class PufferfishBehaviour : MonoBehaviour
             //SoundManager.playSound(SoundManager.hitBullet); //If bullet leaves screen triggers sound
             Destroy(collision.gameObject);
             ScoreManager.scoreManager.AddScore(15);
-            SoundManager.playSFX(SoundManager.pufferFishDeath);
             Destroy(gameObject);
+            SoundManager.playSFX(SoundManager.pufferFishDeath);
+            
         }
         if (collision.tag == "Player")
         {

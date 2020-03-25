@@ -130,6 +130,7 @@ public class SubMarineBehaviour : MonoBehaviour
             current_air = 0.0f;
             Debug.Log("Player has died");
             SoundManager.music.Stop();
+            Cursor.visible = true;
             ScoreManager.scoreManager.StoreScore();
         }
     }
@@ -217,6 +218,15 @@ public class SubMarineBehaviour : MonoBehaviour
             current_air += oxygen_volume;
             Destroy(collision.gameObject);
 
+        }
+        if(collision.tag == "Repair")
+        {
+            if (damage > 0)
+            {
+                air_countdown_rate = air_countdown_rate / 1.5f;
+                damage--;
+            }
+            Destroy(collision.gameObject);
         }
 
         //Powerup
