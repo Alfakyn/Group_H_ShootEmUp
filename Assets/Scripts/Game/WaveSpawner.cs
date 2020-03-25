@@ -26,25 +26,19 @@ public class WaveSpawner : MonoBehaviour
     // Start is called before the first frame update
     private float tutorial_time;
     private float tutorial_timer;
+    public static bool chat_is_done;
 
     void Start()
     {
-        tutorial_time = 30.0f;
-        tutorial_timer = 0f;
+        chat_is_done = false;
         waves_timer = time_between_waves;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (tutorial_timer < tutorial_time)
+        if (chat_is_done == true)
         {
-            tutorial_timer += Time.deltaTime;
-        }
-        else
-        {
-
-
             if (waves_timer <= 0.0f && wave_index < waves.Length)
             {
                 spawnWave(waves[wave_index]);

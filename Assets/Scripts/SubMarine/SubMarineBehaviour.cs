@@ -18,6 +18,10 @@ public class SubMarineBehaviour : MonoBehaviour
 
     const float MOVE_SPEED = 5f;
 
+    private const float INVINCIBILITY_FRAMES = 3;
+    private float invincibility_timer;
+    private bool invincibility_cheat_on;
+
 
     bool submarine_covered_in_ink;
     const float INK_FALLOFF_TIME = 30;
@@ -32,6 +36,10 @@ public class SubMarineBehaviour : MonoBehaviour
     public GameObject bullet;
     public float bullet_reload_interval;
     public float bullet_reload_timer = 0;
+
+    public GameObject[] chatBubbles;
+    private int chat_counter;
+    public bool chat_is_done;
 
 
     private int damage;
@@ -58,6 +66,14 @@ public class SubMarineBehaviour : MonoBehaviour
 
         submarine_covered_in_ink = false;
 
+        invincibility_cheat_on = false;
+        invincibility_timer = 0;
+
+        chat_counter = 0;
+        chat_is_done = false;
+        ScoreManager.chat_is_done = false;
+        WaveSpawner.chat_is_done = false;
+
         air_meter_bar.maxValue = current_air;
         air_meter_bar.value = current_air;
         air_countdown_rate = 0.1f;
@@ -68,17 +84,72 @@ public class SubMarineBehaviour : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        if(chat_is_done == false)
+        {
+            checkChat();
+        }
         shootTorpedo();
         moveCrosshair();
+        checkCheats();
     }
 
     private void FixedUpdate()
     {
+        checkInvincibility();
         shootGun();
         displayHurtColor();
         checkInk();
-        checkAir();
+        if (chat_is_done == true)
+        {
+            checkAir();
+        }
         moveSubmarine();
+    }
+
+    void checkCheats()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Vector2 cheatpos = rigidbody2d.position;
+            cheatpos.x = camera_half_width - 20;
+
+            if (rigidbody2d.position.x >= cheatpos.x)
+            {
+                invincibility_cheat_on = true;
+                air_countdown_rate = 0;
+                Debug.Log("Cheat on");
+            }
+        }
+    }
+    void checkInvincibility()
+    {
+        if (invincibility_timer < INVINCIBILITY_FRAMES && invincibility_cheat_on == false)
+        {
+            invincibility_timer += Time.fixedDeltaTime;
+        }
+        else if ( invincibility_cheat_on == true)
+        {
+            invincibility_timer = 0;
+        }
+
+    }
+    void checkChat()
+    {
+        if(Input.GetKeyDown(KeyCode.X) && chat_counter < chatBubbles.Length -1)
+        {
+            chatBubbles[chat_counter].SetActive(false);
+            chat_counter++;
+            chatBubbles[chat_counter].SetActive(true);
+
+        }
+        else if(Input.GetKeyDown(KeyCode.X) && chat_counter == chatBubbles.Length -1)
+        {
+            chatBubbles[chat_counter].SetActive(false);
+            chat_is_done = true;
+            ScoreManager.chat_is_done = true;
+            WaveSpawner.chat_is_done = true;
+        }
     }
     void moveCrosshair()
     {
@@ -194,17 +265,21 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         if (collision.tag == "Enemy" || collision.tag == "Spike")
         {
-            if (damage < MAX_DAMAGE)
+            if (invincibility_timer >= INVINCIBILITY_FRAMES)
             {
-                damage++;
-                air_countdown_rate = air_countdown_rate * 1.5f;
+                if (damage < MAX_DAMAGE)
+                {
+                    damage++;
+                    air_countdown_rate = air_countdown_rate * 1.5f;
+                }
+                else
+                {
+                    current_air -= 50;
+                }
+                sprite_renderer.color = new Color(1, 0, 0);
+                color_timer = 0.0f;
+                invincibility_timer = 0;
             }
-            else
-            {
-                current_air -= 50;
-            }
-            sprite_renderer.color = new Color(1, 0, 0);
-            color_timer = 0.0f;
         }
         if (collision.tag == "Ink")
         {

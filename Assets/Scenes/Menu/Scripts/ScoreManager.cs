@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
     public float playerScore = 0f;
     public int scoreBoardMax;
 
+    public static bool chat_is_done;
     void Awake()
     {
         //instantiates a static scoreManager so that non static variables can be accessed
@@ -36,7 +37,10 @@ public class ScoreManager : MonoBehaviour
                 currentScore = GameObject.FindGameObjectWithTag("CanvasPauseMenu").transform.GetChild(3).gameObject;
             }
             //Then start counting points
-            playerScore += (1 * Time.deltaTime);
+            if (chat_is_done == true)
+            {
+                playerScore += (1 * Time.deltaTime);
+            }
             currentScore.GetComponent<TextMeshProUGUI>().text = ("Score: " + (int)playerScore);
         }
     }
