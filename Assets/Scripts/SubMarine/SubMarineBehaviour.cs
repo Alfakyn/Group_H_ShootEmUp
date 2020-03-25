@@ -91,26 +91,33 @@ public class SubMarineBehaviour : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        if(chat_is_done == false)
+        if (current_air > 0.0f)
         {
-            checkChat();
+            if (chat_is_done == false)
+            {
+                checkChat();
+            }
+            shootTorpedo();
+            moveCrosshair();
+            checkCheats();
         }
-        shootTorpedo();
-        moveCrosshair();
-        checkCheats();
     }
 
     private void FixedUpdate()
     {
-        checkInvincibility();
-        shootGun();
-        displayHurtColor();
-        checkInk();
         if (chat_is_done == true)
         {
             checkAir();
         }
-        moveSubmarine();
+        if (current_air > 0.0f)
+        {
+            checkInvincibility();
+            shootGun();
+            displayHurtColor();
+            checkInk();
+           
+            moveSubmarine();
+        }
     }
 
     void checkCheats()
