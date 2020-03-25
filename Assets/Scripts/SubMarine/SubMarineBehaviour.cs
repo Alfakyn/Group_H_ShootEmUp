@@ -12,10 +12,24 @@ public class SubMarineBehaviour : MonoBehaviour
     public Rigidbody2D rigidbody2d;
     public UnityEngine.Experimental.Rendering.Universal.Light2D flashlight;
     float camera_half_height, camera_half_width;
+<<<<<<< Updated upstream
+=======
+
+    private Vector3 crosshair_target;
+    public GameObject crosshair;
+>>>>>>> Stashed changes
+
+    private int chat_counter;
+    public GameObject[] chat_bubbles;
+    public bool chat_is_done;
 
     Camera main_camera;
 
     const float MOVE_SPEED = 5f;
+
+    private const float INVINCIBILITY_FRAMES = 5;
+    private float invincibility_timer;
+    private bool invincibility_cheat_on;
 
 
     bool submarine_covered_in_ink;
@@ -32,6 +46,16 @@ public class SubMarineBehaviour : MonoBehaviour
     public float bullet_reload_interval;
     public float bullet_reload_timer = 0;
 
+<<<<<<< Updated upstream
+=======
+
+    private int damage;
+    private const int MAX_DAMAGE = 5;
+    public Image[] hull_integrity_representation;
+    public Sprite damaged_hull;
+    public Sprite undamaged_hull;
+
+>>>>>>> Stashed changes
     public Slider air_meter_bar;
     public float current_air;
     private float air_countdown_rate;
@@ -46,6 +70,13 @@ public class SubMarineBehaviour : MonoBehaviour
         main_camera = Camera.main;
         camera_half_height = main_camera.orthographicSize;    //Camera.main.orthographicSize returns the half-height of the camera in world units
         camera_half_width = camera_half_height * main_camera.aspect;    //Multiply the half-height by the aspect ration to get the half-width
+     
+        chat_counter = 0;
+        chat_is_done = false;
+        ScoreManager.chat_is_done = false;
+
+        invincibility_timer = 0;
+        invincibility_cheat_on = false;
 
         submarine_covered_in_ink = false;
 
@@ -59,17 +90,81 @@ public class SubMarineBehaviour : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        if (chat_is_done == false)
+        {
+          checkChatbubbles();
+        }
         shootTorpedo();
+<<<<<<< Updated upstream
+=======
+        moveCrosshair();
+        checkCheats();
+        
+>>>>>>> Stashed changes
     }
 
     private void FixedUpdate()
     {
+        checkInvincibility();
         shootGun();
         displayHurtColor();
-        checkInk();
-        checkAir();
+        checkInk();  
+        if (chat_is_done == true)
+        {
+            checkAir();
+        }
         moveSubmarine();
     }
+<<<<<<< Updated upstream
+=======
+    void checkCheats()
+    {
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            Vector2 cheatpos = rigidbody2d.position;
+            cheatpos.x = camera_half_width - 20;
+            if (rigidbody2d.position.x >=  cheatpos.x)
+            {
+                Debug.Log("Invincibility cheat on");
+                invincibility_cheat_on = true;
+                air_countdown_rate = 0;
+            }
+        }
+    }
+    void checkInvincibility()
+    {
+        if(invincibility_timer < INVINCIBILITY_FRAMES && invincibility_cheat_on == false)
+        {
+            invincibility_timer += Time.fixedDeltaTime;
+        }
+        else if(invincibility_cheat_on == true)
+        {
+            invincibility_timer = 0;
+
+        }
+    }
+    void checkChatbubbles()
+    {
+        if(Input.GetKeyDown(KeyCode.X) && chat_counter < chat_bubbles.Length -1)
+        {
+            chat_bubbles[chat_counter].SetActive(false);
+            chat_counter++;
+            chat_bubbles[chat_counter].SetActive(true);     
+        }
+        else if(Input.GetKeyDown(KeyCode.X) && chat_counter == chat_bubbles.Length -1)
+        {
+            chat_bubbles[chat_counter].SetActive(false);
+            Debug.Log("Chat is done");
+            ScoreManager.chat_is_done = true;
+            chat_is_done = true;
+        }
+    }
+    void moveCrosshair()
+    {
+        crosshair_target = main_camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
+        crosshair.transform.position = new Vector2(crosshair_target.x, crosshair_target.y);
+    }
+>>>>>>> Stashed changes
     void checkInk()
     {
         if (ink_timer < INK_FALLOFF_TIME)
@@ -170,9 +265,27 @@ public class SubMarineBehaviour : MonoBehaviour
     {
         if (collision.tag == "Enemy" || collision.tag == "Spike")
         {
+<<<<<<< Updated upstream
             air_countdown_rate = air_countdown_rate * 1.5f;
             sprite_renderer.color = new Color(1, 0, 0);
             color_timer = 0.0f;
+=======
+            if (invincibility_timer >= INVINCIBILITY_FRAMES)
+            {
+                if (damage < MAX_DAMAGE)
+                {
+                    damage++;
+                    air_countdown_rate = air_countdown_rate * 1.5f;
+                }
+                else
+                {
+                    current_air -= 50;
+                }
+                sprite_renderer.color = new Color(1, 0, 0);
+                color_timer = 0.0f;
+                invincibility_timer = 0;
+            }
+>>>>>>> Stashed changes
         }
         if (collision.tag == "Ink")
         {

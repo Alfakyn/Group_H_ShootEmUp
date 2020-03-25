@@ -24,12 +24,46 @@ public class ScoreManager : MonoBehaviour
     public Text inputText;
     static Transform canvasTransform;
     public static ScoreManager scoreManager;
+<<<<<<< Updated upstream
     static int playerScore = 0;
+=======
+    public float playerScore = 0f;
+    public int scoreBoardMax;
+    
+>>>>>>> Stashed changes
 
+    static public bool chat_is_done;
     void Awake()
     {
+<<<<<<< Updated upstream
         scoreManager = this;    //instantiates a static scoreManager so that non static variables can be accessed
         DontDestroyOnLoad(transform.gameObject);    //Makes it so the ScoreManager stays alive even after the scene is changed
+=======
+        //instantiates a static scoreManager so that non static variables can be accessed
+        scoreManager = this;
+        //Makes it so the ScoreManager stays alive even after the scene is changed
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
+
+    private void Update()
+    {
+        //If it is Level scene
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            //Assign currentScore to TextMesh.text
+            if (currentScore == null)
+            {
+                currentScore = GameObject.FindGameObjectWithTag("CanvasPauseMenu").transform.GetChild(3).gameObject;
+            }
+            //Then start counting points
+            if (chat_is_done == true)
+            {
+                playerScore += (1 * Time.deltaTime);
+            }
+            currentScore.GetComponent<TextMeshProUGUI>().text = ("Score: " + (int)playerScore);
+        }
+>>>>>>> Stashed changes
     }
 
     void Start()

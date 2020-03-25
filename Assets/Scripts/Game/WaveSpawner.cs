@@ -17,21 +17,29 @@ public class WaveSpawner : MonoBehaviour
         public float enemy_spawn_timer = 0.0f;
         public int enemy_index;
     }
-
+    public SubMarineBehaviour submarine;
     public Wave[] waves;
     private int wave_index = 0;
     public float time_between_waves = 10.0f;
     public float waves_timer = 0.0f;
 
     // Start is called before the first frame update
+<<<<<<< Updated upstream
     void Start()
     {
+=======
+
+    void Start()
+    {
+   
+>>>>>>> Stashed changes
         waves_timer = time_between_waves;
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
         if (waves_timer <= 0.0f && wave_index < waves.Length)
         {
             spawnWave(waves[wave_index]);
@@ -39,6 +47,18 @@ public class WaveSpawner : MonoBehaviour
         else if (wave_index < waves.Length)
         {
             waves_timer -= Time.deltaTime;
+=======
+        if (submarine.chat_is_done)
+        {
+            if (waves_timer <= 0.0f && wave_index < waves.Length)
+            {
+                spawnWave(waves[wave_index]);
+            }
+            else if (wave_index < waves.Length)
+            {
+                waves_timer -= Time.deltaTime;
+            }
+>>>>>>> Stashed changes
         }
     }
 
