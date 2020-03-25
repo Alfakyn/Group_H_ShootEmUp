@@ -56,6 +56,7 @@ public class SquidBehaviour : MonoBehaviour
             Destroy(gameObject);
             ScoreManager.scoreManager.AddScore(20);
             SoundManager.playSFX(SoundManager.testSound);
+            SoundManager.playSFX(SoundManager.enemyHit);
         }
         if (ink_reload_timer > 0)
         {

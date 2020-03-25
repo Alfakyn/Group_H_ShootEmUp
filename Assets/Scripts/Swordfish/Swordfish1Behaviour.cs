@@ -44,6 +44,7 @@ public class Swordfish1Behaviour : MonoBehaviour
             Destroy(gameObject);
             ScoreManager.scoreManager.AddScore(10);
             SoundManager.playSFX(SoundManager.testSound); // ( ͡° ͜ʖ ͡°) N I C E ( ͡° ͜ʖ ͡°)
+            SoundManager.playSFX(SoundManager.enemyHit);
         }
         else
         {

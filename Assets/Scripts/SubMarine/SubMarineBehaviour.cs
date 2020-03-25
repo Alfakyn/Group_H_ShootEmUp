@@ -209,6 +209,7 @@ public class SubMarineBehaviour : MonoBehaviour
         {
             submarine_covered_in_ink = true;
             ink_timer = 0f;
+            SoundManager.playSFX(SoundManager.inkSplatter);
             Destroy(collision.gameObject);
         }
         if (collision.tag == "Oxygen")
