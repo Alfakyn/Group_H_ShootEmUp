@@ -76,6 +76,7 @@ public class SubMarineBehaviour : MonoBehaviour
         chat_is_done = false;
         ScoreManager.chat_is_done = false;
         WaveSpawner.chat_is_done = false;
+        GlobalLightBehaviour.chat_is_done = false;
 
         tutorialtext.SetActive(true);
 
@@ -154,6 +155,7 @@ public class SubMarineBehaviour : MonoBehaviour
             chat_is_done = true;
             ScoreManager.chat_is_done = true;
             WaveSpawner.chat_is_done = true;
+            GlobalLightBehaviour.chat_is_done = true;
             tutorialtext.SetActive(false);
            
         }

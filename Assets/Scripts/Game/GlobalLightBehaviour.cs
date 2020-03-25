@@ -8,6 +8,7 @@ public class GlobalLightBehaviour : MonoBehaviour
     float light_intensity_timer;
     const float BRIGHTNESS_RATE = 1000;
     const float MAX_BRIGHTNESS = 0.5f;
+    public static bool chat_is_done;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,12 @@ public class GlobalLightBehaviour : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (global_light.intensity <= MAX_BRIGHTNESS)
+        if (chat_is_done == true)
         {
-            global_light.intensity += Time.deltaTime / BRIGHTNESS_RATE;
+            if (global_light.intensity <= MAX_BRIGHTNESS)
+            {
+                global_light.intensity += Time.deltaTime / BRIGHTNESS_RATE;
+            }
         }
        
     }
