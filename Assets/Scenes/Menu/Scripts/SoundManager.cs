@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
     public static AudioClip creditsMusic;
     public static AudioClip inkSplatter;
     public static AudioClip enemyHit;
+    public static AudioClip powerUp;
 
     public static AudioSource[] audioSources;
     public static AudioSource sfx;
@@ -38,6 +39,7 @@ public class SoundManager : MonoBehaviour
         creditsMusic = Resources.Load<AudioClip>("SFX/Implemented resources 18th/Credits");
         inkSplatter = Resources.Load<AudioClip>("SFX/Implemented resources 18th/Ink Splatter");
         enemyHit = Resources.Load<AudioClip>("SFX/Implemented resources 18th/Enemy hit");
+        powerUp = Resources.Load<AudioClip>("SFX/Power up bubble");
 
         audioSources = GetComponents<AudioSource>();
         sfx = audioSources[0];

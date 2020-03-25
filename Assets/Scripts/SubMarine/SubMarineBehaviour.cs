@@ -319,6 +319,7 @@ public class SubMarineBehaviour : MonoBehaviour
         if (collision.tag == "Oxygen")
         {
             current_air += oxygen_volume;
+            SoundManager.playSFX(SoundManager.powerUp);
             Destroy(collision.gameObject);
 
         }
@@ -329,6 +330,7 @@ public class SubMarineBehaviour : MonoBehaviour
                 air_countdown_rate = air_countdown_rate / 1.5f;
                 damage--;
             }
+            SoundManager.playSFX(SoundManager.powerUp);
             Destroy(collision.gameObject);
         }
 
