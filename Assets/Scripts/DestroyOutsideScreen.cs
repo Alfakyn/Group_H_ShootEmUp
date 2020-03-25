@@ -8,7 +8,7 @@ public class DestroyOutsideScreen : MonoBehaviour
     float camera_half_width, camera_half_height;
 
     SpriteRenderer sprite_renderer;
-    float sprite_half_width, sprite_half_height;
+    float sprite_width, sprite_half_height;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class DestroyOutsideScreen : MonoBehaviour
         camera_half_width = camera_half_height * main_camera.aspect;
 
         sprite_renderer = GetComponent<SpriteRenderer>();
-        sprite_half_width = sprite_renderer.bounds.size.x / 2;
+        sprite_width = sprite_renderer.bounds.size.x * 2;
         sprite_half_height = sprite_renderer.bounds.size.y / 2;
     }
 
@@ -26,12 +26,12 @@ public class DestroyOutsideScreen : MonoBehaviour
     {
         if (transform.position.y > camera_half_height + sprite_half_height ||
             transform.position.y < -camera_half_height - sprite_half_height ||
-            transform.position.x < -camera_half_width - sprite_half_width)
+            transform.position.x < -camera_half_width - sprite_width)
         {
             Destroy(gameObject);
         }
         if ((gameObject.tag == "Bullet" || gameObject.tag == "Torpedo") &&
-            transform.position.x > camera_half_width + sprite_half_width)
+            transform.position.x > camera_half_width + sprite_width)
         {
             Destroy(gameObject);
         }
