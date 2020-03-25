@@ -49,11 +49,28 @@ public class SoundManager : MonoBehaviour
 
     public static void playSFX(AudioClip sound)
     {
+        //if (sound.name == "puffer_death_1")
+        //{
+        //    sfx.volume = 0.4f;
+        //}
+        //else
+        //{
+        //    sfx.volume = 1.0f;
+        //}
         sfx.PlayOneShot(sound);
     }
     public static void playMusic(AudioClip sound)
     {
         music.clip = sound;
+        //Tweaks volume depending on which source it is
+        if (sound.name == "Action Sport Rock Trailer - AShamaluevMusic")
+        {
+            music.volume = 0.3f;
+        }
+        else
+        {
+            music.volume = 1.0f;
+        }
         music.Play();
     }
 }
