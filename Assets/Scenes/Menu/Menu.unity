@@ -3046,7 +3046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreboard: []
   leaderboard: {fileID: 2079595320}
-  inputText: {fileID: 2042631616}
+  inputField: {fileID: 349556482}
   canvas: {fileID: 1586048692}
   playerScore: 0
   scoreBoardMax: 10
@@ -3651,8 +3651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
-  m_SizeDelta: {x: 632, y: 348}
+  m_AnchoredPosition: {x: 0, y: -87.29999}
+  m_SizeDelta: {x: 632, y: 522.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079595320
 MonoBehaviour:
@@ -3679,7 +3679,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3733,7 +3733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038146973, y: -329}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -378}
   m_SizeDelta: {x: 144.4, y: 39.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138983284

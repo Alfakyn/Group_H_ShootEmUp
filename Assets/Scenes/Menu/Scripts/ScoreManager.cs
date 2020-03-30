@@ -9,13 +9,14 @@ public class ScoreManager : MonoBehaviour
 {
     public List<Score> scoreboard = new List<Score>();
     public static Jsonwrapper wrapper;
-    public Text leaderboard, inputText;
+    public Text leaderboard;
+    public InputField inputField;
     GameObject currentScore;
     public Canvas canvas;
     public static ScoreManager scoreManager;
     public float playerScore = 0f;
     public int scoreBoardMax;
-    private int maxCharName = 20;
+    private int nameCharLimit = 15;
 
     public static bool chat_is_done;
     void Awake()
@@ -24,6 +25,11 @@ public class ScoreManager : MonoBehaviour
         scoreManager = this;
         //Makes it so the ScoreManager stays alive even after the scene is changed
         DontDestroyOnLoad(transform.gameObject);
+    }
+
+    private void Start()
+    {
+        scoreManager.inputField.characterLimit = nameCharLimit;
     }
 
 
@@ -62,10 +68,10 @@ public class ScoreManager : MonoBehaviour
     public void SaveScore()
     {
         Score score = new Score();
-        score.name = scoreManager.inputText.text;
-        if (score.name.Length > maxCharName)
+        score.name = scoreManager.inputField.text;
+        if (score.name.Length > nameCharLimit)
         {
-            score.name = score.name.Substring(0, maxCharName);
+            score.name = score.name.Substring(0, nameCharLimit);
         }
         score.score = (int)playerScore;
         SaveToScoreboard(score);
